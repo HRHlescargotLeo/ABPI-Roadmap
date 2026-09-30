@@ -1,9 +1,13 @@
-# ABPI — website improvement prototypes (V1)
+# ABPI — website improvement prototypes (V2)
 
-Five clickable greyscale prototypes for improvements to abpi.org.uk, prepared by ClerksWell following the
-phase 1 review (30 September 2026). They are deliberately greyscale: this round is about structure and
-behaviour. The ABPI design layer (aubergine and plum, Poppins, square corners) comes in the next round and
-will live entirely in `src/css/theme.css`.
+Five clickable prototypes for improvements to abpi.org.uk, prepared by ClerksWell following the
+phase 1 review (30 September 2026). The ABPI design layer (aubergine, plum and magenta, Poppins, square
+corners, split heroes, the box motif) lives entirely in `src/css/theme.css`; remove that file and
+`src/js/photos.js` to get the greyscale prototypes back.
+
+Photography is the ABPI's own, loaded directly from abpi.org.uk by `src/js/photos.js` (the mapping of
+images to page heads and placeholders lives there). Where an image can't load, a brand-colour illustration
+shows instead. Photography © ABPI; the repository and site are public, so treat them accordingly.
 
 ## View
 Live: https://hrhlescargotleo.github.io/ABPI-Roadmap/
@@ -30,4 +34,4 @@ Edit files in `src/`; `docs/` is generated (commit it, as GitHub Pages serves it
 Sample data is in `src/js/data.js`: member names, statistics, publication and event titles are real; therapy areas, sites, affiliates, prices, places and anything marked "sample" are not.
 
 ## Status
-V1, greyscale prototypes for internal review. The ABPI's own header and footer are replaced by a prototype navigator. Notes are off by default; switch "Notes on" in the top bar to show what each prototype proposes and why, plus in-page annotations (yellow for behaviour, red for open questions).
+V2, designed prototypes for internal review (V1 was greyscale). The ABPI's own header and footer are replaced by a prototype navigator. Notes are off by default; switch "Notes on" in the top bar to show what each prototype proposes and why, plus in-page annotations (yellow for behaviour, red for open questions).
