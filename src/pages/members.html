@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our members — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · Members</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Turn the members list into a directory people can search by name, category and therapy area, with each company's logo, UK sites and a link to its own site. Give members an obvious way in to the member area from here and from every page.</p></div>
+          <div><h2>Why</h2><p>Today the list is company names in alphabetical groups, with a "Back To Top" link after each letter and nothing else. It is also the best evidence the ABPI has of its reach, so it is worth more than that to a company deciding whether to join. Separately, members are told they get access to an extranet, but there is no login link anywhere on the site. Every one of the five associations we compared has one on its homepage.</p></div>
+        </div>
+        <p class="proposal-foot">Member names are the ABPI's real full members. Therapy areas, UK sites and all affiliates are sample data.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Membership</p>
+        <h1>Our members</h1>
+        <p class="lead">Over 150 organisations, from global pharmaceutical companies to UK biotechs and the specialists who support them.</p>
+        <div class="row">
+          <a class="btn" href="~/pages/member-area.html">Member area: sign in</a>
+          <a class="btn btn-secondary" href="~/pages/join.html">Become a member</a>
+        </div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>"Member area" also appears in the utility links at the top of every page on the live site, so members never have to find it through Membership.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top">
+      <!-- Member directory (R20, R21) -->
+      <section id="directory" aria-labelledby="dir-title">
+        <h2 class="visually-hidden" id="dir-title">Member directory</h2>
+        <form class="dir-tools" id="dir-form" role="search">
+          <div class="field">
+            <label for="dir-q">Search members</label>
+            <div class="search-row"><input type="search" id="dir-q" placeholder="Company name, therapy area or town"><button type="submit" class="btn">Search</button></div>
+          </div>
+          <div class="field">
+            <label for="dir-area">Therapy area</label>
+            <select id="dir-area"><option value="all">All therapy areas</option></select>
+          </div>
+          <div class="field">
+            <span class="visually-hidden" id="view-label">View</span>
+            <div class="seg" role="group" aria-labelledby="view-label">
+              <button type="button" data-dir-view="grid" aria-pressed="true">Grid</button>
+              <button type="button" data-dir-view="list" aria-pressed="false">List</button>
+            </div>
+          </div>
+        </form>
+        <div class="results-toolbar">
+          <div class="row" role="group" aria-label="Membership category">
+            <button type="button" class="chip" data-dir-cat="all" aria-pressed="true">All members</button>
+            <button type="button" class="chip" data-dir-cat="full" aria-pressed="false">Full members</button>
+            <button type="button" class="chip" data-dir-cat="research" aria-pressed="false">Research affiliates</button>
+            <button type="button" class="chip" data-dir-cat="general" aria-pressed="false">General affiliates</button>
+          </div>
+          <p class="result-count" id="dir-count" aria-live="polite"></p>
+        </div>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Results update as you type. Search covers company name, therapy area and town. Filters combine; an empty result offers to clear them.</p>
+        <div id="dir-results" class="member-list view-grid"></div>
+        <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Would members be willing to supply a logo, therapy areas and UK sites for their listing? A short form in the member area could collect them once a year.</p>
+      </section>
+
+      <section aria-labelledby="join-cta">
+        <div class="cta-band">
+          <div><h2 id="join-cta">Not a member yet?</h2><p>Find out which membership fits your organisation in three questions.</p></div>
+          <a class="btn" href="~/pages/join.html#checker">Check which membership fits</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media centre — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 5 of 5 · Media centre</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A media centre that separates press releases, statements and blogs, with the press office and spokespeople on the same page and a sign-up for embargoed releases.</p></div>
+          <div><h2>Why</h2><p>The current Media Centre filters by two types, Blogs and News, so a journalist looking for the ABPI's response to a minister resigning finds it among research announcements. The introduction also invites people to "call the Press Office at PressOffice@abpi.org.uk", which is harder than it sounds. Small fixes, but this is the page journalists land on first.</p></div>
+        </div>
+        <p class="proposal-foot">Titles and dates are real. Splitting "News" into press releases and statements is our reading of each item and would need checking.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/stay-informed.html">Stay informed</a></li><li class="breadcrumb-item" aria-current="page">Media centre</li></ol></nav>
+        <h1>Media centre</h1>
+        <p class="lead">News, statements and comment from the ABPI. Journalists can reach the press office 24 hours a day.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top">
+      <div class="media-layout">
+        <!-- News list (R51) -->
+        <section id="media-app" aria-labelledby="news-title">
+          <h2 class="visually-hidden" id="news-title">Latest</h2>
+          <form id="media-form" role="search" class="field">
+            <label for="media-q">Search news</label>
+            <div class="search-row"><input type="search" id="media-q" placeholder="For example: Disclosure UK"><button type="submit" class="btn">Search</button></div>
+          </form>
+          <div class="results-toolbar">
+            <div class="row" role="group" aria-label="Type">
+              <button type="button" class="chip" data-kind="all" aria-pressed="true">All</button>
+              <button type="button" class="chip" data-kind="Press release" aria-pressed="false">Press releases</button>
+              <button type="button" class="chip" data-kind="Statement" aria-pressed="false">Statements</button>
+              <button type="button" class="chip" data-kind="Blog" aria-pressed="false">Blogs</button>
+            </div>
+            <p class="result-count" id="media-count" aria-live="polite"></p>
+          </div>
+          <div id="media-list"></div>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Press releases are marked with a solid label. Blogs show the author, linked to an author page on the live build.</p>
+        </section>
+
+        <!-- Press office (R52) -->
+        <div>
+          <aside class="panel surface" aria-labelledby="press-title">
+            <h2 id="press-title">Press office</h2>
+            <p>pressoffice@abpi.org.uk<br>+44 (0)20 7747 7147, 24 hours</p>
+            <button type="button" class="btn btn-secondary btn-sm" data-copy="pressoffice@abpi.org.uk">Copy email address</button>
+            <p class="field-hint"><a href="~/pages/stay-informed.html">Get press releases under embargo</a></p>
+          </aside>
+          <aside class="panel" aria-labelledby="spokes-title">
+            <h2 id="spokes-title">Spokespeople</h2>
+            <div class="people" style="grid-template-columns:minmax(0,1fr)">
+              <div class="person"><div class="wf-placeholder avatar">Photo</div><div><b>Richard Torbett</b><p>Chief Executive</p></div></div>
+              <div class="person"><div class="wf-placeholder avatar">Photo</div><div><b>Dr Amit Aggarwal</b><p>Executive Director, Medical Affairs and Strategic Partnerships</p></div></div>
+              <div class="person"><div class="wf-placeholder avatar">Photo</div><div><b>[Name]</b><p>[Value and access]</p></div></div>
+            </div>
+            <p class="field-hint"><a href="#">Photos and logos for press use</a></p>
+          </aside>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which spokespeople does the ABPI want listed, and on which subjects? The two named here appear in recent ABPI news and blogs.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

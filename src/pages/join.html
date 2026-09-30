@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the ABPI — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 1 of 5 · Join the ABPI</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One membership page that sets the three categories side by side, a checker that tells a company which one it fits in three questions, a plain account of how fees are worked out, and an online enquiry that replaces the application form.</p></div>
+          <div><h2>Why</h2><p>At the moment the FAQ asks companies to download the application form, which turns out to be a ZIP file dated 2022, answer every question, sign it and post it. Fees are "get in touch", and the whole process takes four to six weeks. None of that is unusual for a trade association, but it does mean the first thing a prospective member does is the most laborious part. An online enquiry costs the membership team nothing extra and gives them the details they need before the first call.</p></div>
+        </div>
+        <p class="proposal-foot">Figures in [brackets], fee bases and the contact's details are placeholders for the ABPI to supply. Benefit wording is drafted from the current membership pages and needs checking.</p>
+      </div>
+    </aside>
+
+    <!-- Intro (R10) -->
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Membership</p>
+        <h1>Join the ABPI</h1>
+        <p class="lead">We represent companies of all sizes that research, develop and supply medicines and vaccines in the UK, and the organisations that work with them. Membership gives you a voice in policy, early sight of what's coming, and access to our specialists.</p>
+        <div class="row">
+          <a class="btn" href="#checker">Find the right membership</a>
+          <a class="btn btn-secondary" href="~/pages/join-enquiry.html">Make an enquiry</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pad-top">
+
+      <!-- Membership categories (R10) -->
+      <section aria-labelledby="cats-title">
+        <h2 class="section-title" id="cats-title">Three ways to join</h2>
+        <div class="cat-cards">
+          <article class="cat-card" data-cat-card="full">
+            <span class="badge solid match-flag">Recommended for you</span>
+            <h3>Full membership</h3>
+            <p>For companies that supply prescription medicines in the UK, manufacture them, or hold UK marketing authorisations.</p>
+            <ul>
+              <li>Senior-level forums and board sponsored groups</li>
+              <li>Weekly, Chief Executive and UK nations updates</li>
+              <li>Direct access to our policy and technical teams</li>
+            </ul>
+            <a class="btn btn-secondary" href="~/pages/join-enquiry.html?type=full">Enquire about full membership</a>
+          </article>
+          <article class="cat-card" data-cat-card="research">
+            <span class="badge solid match-flag">Recommended for you</span>
+            <h3>Research affiliate</h3>
+            <p>For companies doing research or development of medicines in the UK that do not yet sell them here.</p>
+            <ul>
+              <li>Monitoring and briefings on research policy</li>
+              <li>Clinical research and regulatory networks</li>
+              <li>A route into full membership at launch</li>
+            </ul>
+            <a class="btn btn-secondary" href="~/pages/join-enquiry.html?type=research">Enquire about research affiliate</a>
+          </article>
+          <article class="cat-card" data-cat-card="general">
+            <span class="badge solid match-flag">Recommended for you</span>
+            <h3>General affiliate</h3>
+            <p>For organisations that work with the pharmaceutical industry in the UK: advisers, suppliers, contract organisations and others.</p>
+            <ul>
+              <li>Industry monitoring and briefings</li>
+              <li>Member events and masterclasses</li>
+              <li>Your organisation listed in the member directory</li>
+            </ul>
+            <a class="btn btn-secondary" href="~/pages/join-enquiry.html?type=general">Enquire about general affiliate</a>
+          </article>
+        </div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>When the checker below gives an answer, the matching card is highlighted and marked "Recommended for you".</p>
+      </section>
+
+      <!-- Membership checker (R11) -->
+      <section aria-labelledby="checker-title">
+        <h2 class="section-title" id="checker-title">Which membership fits us?</h2>
+        <form class="checker" id="checker" novalidate>
+          <p class="muted">Three questions at most. Nothing is sent to us.</p>
+          <fieldset data-q>
+            <legend>Does your organisation operate in the UK?</legend>
+            <div class="opts">
+              <label><input type="radio" name="q-uk" value="yes" id="q-uk-yes"> Yes</label>
+              <label><input type="radio" name="q-uk" value="no" id="q-uk-no"> No</label>
+            </div>
+          </fieldset>
+          <fieldset data-q hidden>
+            <legend>Do you supply or manufacture prescription medicines in the UK, or hold a UK marketing authorisation?</legend>
+            <div class="opts">
+              <label><input type="radio" name="q-sells" value="yes" id="q-sells-yes"> Yes</label>
+              <label><input type="radio" name="q-sells" value="no" id="q-sells-no"> No</label>
+            </div>
+          </fieldset>
+          <fieldset data-q hidden>
+            <legend>Do you research or develop medicines in the UK?</legend>
+            <div class="opts">
+              <label><input type="radio" name="q-rd" value="yes" id="q-rd-yes"> Yes</label>
+              <label><input type="radio" name="q-rd" value="no" id="q-rd-no"> No, we work with companies that do</label>
+            </div>
+          </fieldset>
+          <div class="checker-result" id="checker-result" role="status" hidden>
+            <h3>Result</h3>
+            <p></p>
+            <div class="row">
+              <a class="btn" href="~/pages/join-enquiry.html" data-checker-go>Start an enquiry</a>
+              <button type="button" class="btn btn-secondary" data-checker-reset>Start again</button>
+            </div>
+          </div>
+        </form>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Each answer reveals the next question only if it's needed. Changing an earlier answer clears the later ones. The result links to the enquiry with the category already filled in.</p>
+        <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Are these the right three questions? The ABPI's own rules may have edge cases (for example companies with a UK licence but no UK sales) that need a fourth.</p>
+      </section>
+
+      <!-- Benefits (R13) -->
+      <section aria-labelledby="ben-title">
+        <h2 class="section-title" id="ben-title">What members get</h2>
+        <div class="benefits">
+          <div class="benefit"><span class="big">[20+]</span><h3>Influence</h3><p>Shape ABPI positions through board sponsored groups and project teams, and meet ministers, officials and NHS leaders with us.</p><blockquote>[Short quote from a member company, 20 to 30 words, with name and role]</blockquote></div>
+          <div class="benefit"><span class="big">[Weekly]</span><h3>Insight</h3><p>Weekly updates on policy and media, the Chief Executive's update and updates from Scotland, Wales and Northern Ireland.</p><blockquote>[Member quote]</blockquote></div>
+          <div class="benefit"><span class="big">[10]</span><h3>Expertise</h3><p>Our specialists in pricing, market access, regulation, legal, manufacturing, medical and communications, on hand for your questions.</p><blockquote>[Member quote]</blockquote></div>
+          <div class="benefit"><span class="big">[x]</span><h3>Network</h3><p>Member events, masterclasses and forums for HR, finance, legal and corporate affairs leads.</p><blockquote>[Member quote]</blockquote></div>
+        </div>
+        <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>Can the ABPI give us a figure for each block (number of groups, briefings a year, specialist areas, events) and a member quote to go with it?</p>
+      </section>
+
+      <!-- Fees (R12) -->
+      <section aria-labelledby="fees-title">
+        <h2 class="section-title" id="fees-title">How fees are worked out</h2>
+        <p>Fees depend on your category and the size of your UK business. We'll confirm yours before you apply, so there are no surprises.</p>
+        <div class="table-wrap">
+          <table class="fee-table">
+            <thead><tr><th scope="col">Category</th><th scope="col">What the fee is based on</th><th scope="col">Indicative range</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Full membership</th><td>An annual subscription plus a levy, based on [UK sales of branded prescription medicines].</td><td>[From £x a year]</td></tr>
+              <tr><th scope="row">Research affiliate</th><td>[A flat annual fee, banded by UK R&amp;D headcount.]</td><td>[From £x a year]</td></tr>
+              <tr><th scope="row">General affiliate</th><td>[A flat annual fee.]</td><td>[£x a year]</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="wf-note query" data-note="5"><span class="wf-note-label">Open question</span>How much can the ABPI say publicly? Even the basis without figures would answer the question most enquirers start with. The column of ranges can be dropped.</p>
+      </section>
+
+      <!-- Smaller companies (R15) -->
+      <section aria-labelledby="sme-title">
+        <h2 class="section-title" id="sme-title">Smaller and emerging companies</h2>
+        <div class="split">
+          <div>
+            <p>If you're a biotech or a smaller pharmaceutical company, our Smaller Companies Committee looks after issues that affect you in particular, and three of its members sit on the ABPI Board.</p>
+            <p>Many research affiliates join before their first UK launch and move to full membership when it happens.</p>
+            <a href="#">About the Smaller Companies Committee</a>
+          </div>
+          <div class="wf-placeholder ratio-16-9">Case study video: a smaller member company</div>
+        </div>
+      </section>
+
+      <!-- How joining works (R17) -->
+      <section aria-labelledby="steps-title">
+        <h2 class="section-title" id="steps-title">How joining works</h2>
+        <ol class="timeline">
+          <li><div><b>Send an enquiry</b><p>Five minutes online. Tell us about your organisation and what you do in the UK.</p></div></li>
+          <li><div><b>We call you</b><p>Within [two] working days, to talk through membership and confirm your fee.</p></div></li>
+          <li><div><b>Apply</b><p>We send you a short online application to complete and sign.</p></div></li>
+          <li><div><b>Welcome</b><p>Most applications are decided in about four to six weeks. You then get access to the member area and your first briefings.</p></div></li>
+        </ol>
+      </section>
+
+      <!-- Contact (R14) -->
+      <section aria-labelledby="contact-title">
+        <h2 class="section-title" id="contact-title">Talk to us first</h2>
+        <div class="contact-card panel">
+          <div class="wf-placeholder avatar">Photo</div>
+          <div>
+            <p><strong>[Name]</strong>, [Role], Membership Services</p>
+            <p class="contact-lines"><span>membership@abpi.org.uk</span><span>0207 747 1414</span></p>
+            <p class="contact-lines"><a href="~/pages/join-enquiry.html">Send an enquiry</a></p>
+          </div>
+        </div>
+        <p class="wf-note query" data-note="6"><span class="wf-note-label">Open question</span>Is there a named person the ABPI is happy to show here? The phone number is the one on the current membership page, which differs from the general number in the footer.</p>
+      </section>
+
+      <!-- FAQs -->
+      <section aria-labelledby="faq-title">
+        <h2 class="section-title" id="faq-title">Questions</h2>
+        <div class="accordion" data-single>
+          <div class="accordion-item"><button type="button" class="accordion-title" aria-expanded="false">Can individuals join?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>No. The ABPI represents organisations, not individuals. If you're an individual interested in the industry, our careers pages and the ABPI Exam may help.</p></div></div>
+          <div class="accordion-item"><button type="button" class="accordion-title" aria-expanded="false">Does my organisation have to be based in the UK?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>It has to operate in the UK. Many members are UK affiliates of companies based elsewhere.</p></div></div>
+          <div class="accordion-item"><button type="button" class="accordion-title" aria-expanded="false">How long does it take?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>About four to six weeks from receiving your application.</p></div></div>
+          <div class="accordion-item"><button type="button" class="accordion-title" aria-expanded="false">Can we change category later?<span class="accordion-icon">&#9662;</span></button><div class="accordion-content"><p>Yes. Research affiliates usually move to full membership when their first medicine launches in the UK. [ABPI to confirm the process.]</p></div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

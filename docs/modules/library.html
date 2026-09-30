@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module library — ABPI prototypes</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces the ABPI's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="ABPI prototypes, overview">ABPI <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
+          <li><a href="../pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
+          <li><a href="../pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
+          <li><a href="../pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
+          <li><a href="../pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main">
+    <div class="container">
+      <h1>Module library</h1>
+      <p class="lead">The new components used across the five prototypes, each shown once, with the requirement it serves. Existing ABPI components (header, footer, glossary strip, news cards) aren't repeated here.</p>
+
+      <!-- Membership category card (R10) -->
+      <section aria-labelledby="m1"><h2 class="section-title" id="m1">Membership category card <span class="wf-req">R10</span></h2>
+        <div class="cat-cards">
+          <article class="cat-card is-match"><span class="badge solid match-flag">Recommended for you</span><h3>Full membership</h3><p>Who it's for, in one sentence.</p><ul><li>Benefit one</li><li>Benefit two</li></ul><a class="btn btn-secondary" href="../pages/join-enquiry.html?type=full">Enquire</a></article>
+        </div>
+      </section>
+
+      <!-- Benefit block (R13) -->
+      <section aria-labelledby="m2"><h2 class="section-title" id="m2">Benefit block <span class="wf-req">R13</span></h2>
+        <div class="benefits"><div class="benefit"><span class="big">[Figure]</span><h3>Heading</h3><p>One or two sentences.</p><blockquote>[Member quote]</blockquote></div></div>
+      </section>
+
+      <!-- Stepper (R16) -->
+      <section aria-labelledby="m3"><h2 class="section-title" id="m3">Stepper <span class="wf-req">R16</span></h2>
+        <ol class="stepper"><li class="done">Your organisation</li><li class="current" aria-current="step">Your work in the UK</li><li>Your details</li></ol>
+      </section>
+
+      <!-- Named contact (R14) -->
+      <section aria-labelledby="m4"><h2 class="section-title" id="m4">Named contact <span class="wf-req">R14</span></h2>
+        <div class="contact-card panel"><div class="wf-placeholder avatar">Photo</div><div><p><strong>[Name]</strong>, [Role]</p><p class="contact-lines"><span>team@abpi.org.uk</span><span>[Phone]</span></p></div></div>
+      </section>
+
+      <!-- Member card (R21) -->
+      <section aria-labelledby="m5"><h2 class="section-title" id="m5">Member card <span class="wf-req">R21</span></h2>
+        <div class="member-list view-grid"><article class="member-card"><div class="wf-placeholder member-logo" aria-hidden="true">Logo</div><div class="member-body"><h3>[Member company]</h3><p class="member-cat"><span class="badge">Full member</span></p><p><span class="muted">Therapy areas:</span> [Areas]</p><p><span class="muted">UK sites:</span> [Towns]</p><a href="#" class="member-link">Company website</a></div></article></div>
+      </section>
+
+      <!-- Locked teaser (R24) -->
+      <section aria-labelledby="m6"><h2 class="section-title" id="m6">Members-only teaser <span class="wf-req">R24</span></h2>
+        <div class="brief-list"><article class="locked"><span class="lock">Members only</span><h3>[Briefing title]</h3><p>[One-line summary a visitor can see.]</p><a class="btn btn-sm btn-secondary" href="../pages/member-area.html">Sign in to read</a></article></div>
+      </section>
+
+      <!-- Sourced figure (R31) -->
+      <section aria-labelledby="m7"><h2 class="section-title" id="m7">Sourced figure <span class="wf-req">R05, R31</span></h2>
+        <div class="fig-grid"><div class="fig"><b class="fig-value">£9.3bn</b><p class="fig-label">investment in UK R&amp;D in 2024</p><p class="fig-source"><span class="muted">Source:</span> ONS, Business enterprise research and development UK: 2024, December 2025</p><button type="button" class="btn-link" data-copy="£9.3bn investment in UK R&amp;D in 2024 (ONS, Business enterprise research and development UK: 2024, December 2025)">Copy with source</button></div></div>
+      </section>
+
+      <!-- Publication result (R42) -->
+      <section aria-labelledby="m8"><h2 class="section-title" id="m8">Publication result <span class="wf-req">R42</span></h2>
+        <article class="pub-card"><p class="pub-meta"><span class="badge">Report</span> <span>8 Sep 2026</span> <span class="muted">· HTML + PDF · 25 min read</span></p><h3><a href="#">[Publication title]</a></h3><p class="pub-summary">[Summary written for the listing, one or two sentences.]</p><p class="pub-theme muted">[Theme]</p></article>
+      </section>
+
+      <!-- Topic key figures and position (R44) -->
+      <section aria-labelledby="m9"><h2 class="section-title" id="m9">Position in brief <span class="wf-req">R44</span></h2>
+        <div class="position-box"><h3>Our position in brief</h3><ul><li>[Point one]</li><li>[Point two]</li></ul></div>
+      </section>
+
+      <!-- Event listing (R53) -->
+      <section aria-labelledby="m10"><h2 class="section-title" id="m10">Event listing <span class="wf-req">R53, R54</span></h2>
+        <article class="event-card"><div class="event-date" aria-hidden="true"><b>6</b>Oct<br>2026</div><div class="event-body"><p class="event-tags"><span class="badge solid">Few places left</span><span class="tag">In person</span><span class="tag">Open to all</span></p><h3>[Event title]</h3><p class="event-when">[Date · time · place]</p><p class="event-desc">[Description, clamped to three lines in the list.]</p><p class="event-price"><span class="muted">Price:</span> [£]</p></div><div class="event-actions"><a class="btn" href="../pages/events.html">Details and booking</a></div></article>
+      </section>
+
+      <!-- Option cards (R50) -->
+      <section aria-labelledby="m11"><h2 class="section-title" id="m11">Option cards <span class="wf-req">R50</span></h2>
+        <div class="option-cards"><label class="option-card"><input type="radio" name="lib-demo" id="lib-demo-1" checked><strong>Weekly round-up</strong><span>One email on Fridays</span></label><label class="option-card"><input type="radio" name="lib-demo" id="lib-demo-2"><strong>Monthly</strong><span>The month's highlights</span></label></div>
+      </section>
+
+      <!-- Annotations -->
+      <section aria-labelledby="m12"><h2 class="section-title" id="m12">Annotations</h2>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Yellow notes describe behaviour a screenshot can't show.</p>
+        <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Red notes are questions for the ABPI.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces the ABPI's own footer) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Sample data where marked</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

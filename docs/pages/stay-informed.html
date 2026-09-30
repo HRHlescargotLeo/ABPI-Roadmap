@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay informed — ABPI prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces the ABPI's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="ABPI prototypes, overview">ABPI <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
+          <li><a href="../pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
+          <li><a href="../pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
+          <li><a href="../pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
+          <li><a href="../pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 5 of 5 · Stay informed</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A way to sign up for email by topic, with press releases under embargo for journalists. Alongside it, a media centre that separates press releases, statements and blogs, and event listings that say plainly whether there are places left.</p></div>
+          <div><h2>Why</h2><p>We couldn't find a newsletter or email alert sign-up anywhere on the site: not on the homepage, the news pages or in the footer. The ABPI publishes something most weeks, so the people who would most like to hear about it, officials, journalists and member staff, have to remember to come and look. Three of the five associations we compared offer email sign-up from the homepage.</p></div>
+        </div>
+        <p class="proposal-foot">Nothing is sent from this prototype. Topics follow the proposed publication themes and can be changed.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">News and events</p>
+        <h1>Stay informed</h1>
+        <p class="lead">Choose what you hear from us about, and how often.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top">
+      <div class="prefs-layout">
+        <!-- Preference centre (R50) -->
+        <section aria-labelledby="prefs-title">
+          <form id="prefs-form" novalidate>
+            <h2 id="prefs-title">Email updates</h2>
+            <div class="form-grid">
+              <div class="field" data-msg="Enter your email address."><label for="pref-email">Email address</label><input type="email" id="pref-email" required autocomplete="email"></div>
+              <div class="field"><label for="pref-name">First name <span class="muted">(optional)</span></label><input type="text" id="pref-name" autocomplete="given-name"></div>
+            </div>
+            <fieldset class="field" data-min="1" data-msg="Choose at least one topic.">
+              <legend>Topics</legend>
+              <label class="check"><input type="checkbox" id="pref-all"> <strong>Everything</strong></label>
+              <div class="check-grid">
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-1" value="Clinical research"> Clinical research</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-2" value="Health data"> Health data</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-3" value="Investment and growth"> Investment and growth</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-4" value="Medicine supply"> Medicine supply</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-5" value="Rare diseases"> Rare diseases</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-6" value="Value and access"> Value and access</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-7" value="Transparency and the Code"> Transparency and the Code</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-8" value="UK nations"> Scotland, Wales and Northern Ireland</label>
+                <label class="check"><input type="checkbox" name="pref-topic" id="pt-9" value="Events"> Events and masterclasses</label>
+              </div>
+            </fieldset>
+            <fieldset class="field" data-radio data-msg="Choose how often.">
+              <legend>How often</legend>
+              <div class="option-cards">
+                <label class="option-card"><input type="radio" name="pref-freq" id="pf-each" value="As it happens"><strong>As it happens</strong><span>An email when something is published on your topics</span></label>
+                <label class="option-card"><input type="radio" name="pref-freq" id="pf-week" value="Weekly round-up" checked><strong>Weekly round-up</strong><span>One email on Fridays</span></label>
+                <label class="option-card"><input type="radio" name="pref-freq" id="pf-month" value="Monthly"><strong>Monthly</strong><span>The month's highlights</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label class="check"><input type="checkbox" id="pref-press"> I'm a journalist and would like press releases under embargo</label>
+            </div>
+            <div id="journalist-fields" class="form-grid" hidden>
+              <div class="field" data-msg="Enter the outlet you write for."><label for="pref-outlet">Publication or outlet</label><input type="text" id="pref-outlet" data-req></div>
+              <div class="field"><label for="pref-beat">What you cover <span class="muted">(optional)</span></label><input type="text" id="pref-beat"></div>
+            </div>
+            <div class="field" data-msg="Please agree so we can send you emails.">
+              <label class="check"><input type="checkbox" id="pref-consent" required> I agree to the ABPI sending me these emails. I can unsubscribe at any time.</label>
+            </div>
+            <button type="submit" class="btn">Sign up</button>
+          </form>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>"Everything" ticks every topic. Ticking the journalist box asks for the outlet, which the press office uses to approve embargoed access. The same short form (email and one tick box) sits in the footer of every page and links here for the full choice.</p>
+
+          <div id="prefs-done" class="confirm-box" role="status" hidden>
+            <div class="tick" aria-hidden="true">✓</div>
+            <h2>Check your inbox</h2>
+            <p>We've sent an email to confirm your address. Updates start once you click the link in it.</p>
+            <dl class="kv review-list" id="prefs-summary"></dl>
+            <button type="button" class="btn btn-secondary" data-prefs-edit>Change these choices</button>
+          </div>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Which email platform does the ABPI use today, and does it hold topic preferences? That decides how much of this is configuration and how much is build.</p>
+        </section>
+
+        <!-- Signposts -->
+        <aside aria-label="More ways to keep up">
+          <div class="hub-tiles" style="grid-template-columns:minmax(0,1fr)">
+            <a class="hub-tile" href="../pages/media.html"><h3>Media centre</h3><p>Press releases, statements and blogs, plus press office contacts and spokespeople.</p></a>
+            <a class="hub-tile" href="../pages/events.html"><h3>Events</h3><p>Masterclasses, Code training and the Annual Conference, with places left shown on each.</p></a>
+            <a class="hub-tile" href="../pages/publications.html"><h3>Publications</h3><p>Reports, positions and consultation responses.</p></a>
+          </div>
+          <div class="panel" style="margin-top:1rem">
+            <h2>Follow us</h2>
+            <p class="row"><a href="#">LinkedIn</a><a href="#">X</a><a href="#">YouTube</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces the ABPI's own footer) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Sample data where marked</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

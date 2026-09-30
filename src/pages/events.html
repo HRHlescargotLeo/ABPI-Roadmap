@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 5 of 5 · Events</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Event listings that show, before anyone clicks, whether places are left, whether it's online or in person, who it's for and what it costs. The details open in a panel with booking, a waiting list when it's full, and an add-to-calendar file. Events move to their own section, out of /membership2/.</p></div>
+          <div><h2>Why</h2><p>ABPI Code training is promoted as "now available to book" on the events page, while both remaining dates are marked FULL further down its own page. The Code page lists the same course under 10 August; the events page says 11 May to 6 November. Prices aren't shown anywhere, and on the homepage the event tiles print their full descriptions, so a row of four grows to over a thousand pixels tall.</p></div>
+        </div>
+        <p class="proposal-foot">Event titles and dates are real. Status, places and prices are sample data.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/stay-informed.html">Stay informed</a></li><li class="breadcrumb-item" aria-current="page">Events</li></ol></nav>
+        <h1>Events</h1>
+        <p class="lead">Masterclasses, training, member events and our Annual Conference.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top" id="events-app">
+      <!-- Filters (R53) -->
+      <div class="filter-bar">
+        <div class="field"><label for="ev-format">Format</label><select id="ev-format"><option value="all">In person and online</option><option>In person</option><option>Online</option></select></div>
+        <div class="field"><label for="ev-audience">Who it's for</label><select id="ev-audience"><option value="all">Everyone</option><option value="open">Open to all</option><option value="members">Members</option></select></div>
+        <label class="check"><input type="checkbox" id="ev-open"> Only events with places</label>
+      </div>
+      <p class="result-count" id="ev-count" aria-live="polite"></p>
+      <div id="ev-list"></div>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Status comes from one field in the CMS (booking open, few places, full, register interest, partner event), so the listing, the event page and the homepage can't disagree. Descriptions stop at three lines in the list.</p>
+      <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Can Eventscloud tell the website how many places are left, or does someone update the status by hand?</p>
+    </div>
+
+    <!-- Event details and booking (R54) -->
+    <div class="drawer" id="ev-drawer" role="dialog" aria-modal="true" aria-labelledby="ev-drawer-title">
+      <div class="drawer-panel">
+        <div class="drawer-head"><span class="wf-meta">Event details</span><button type="button" class="drawer-close" aria-label="Close">×</button></div>
+        <div class="drawer-body" id="ev-drawer-body"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

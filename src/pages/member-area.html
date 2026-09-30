@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member area — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 2 of 5 · Member area</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A public member area page that does two jobs. For members, it is the front door: sign in, then the latest briefings, their groups and member events. For everyone else, it shows what is behind the door, with locked previews of real briefings and a list of the groups members can join.</p></div>
+          <div><h2>Why</h2><p>The membership pages list weekly updates, the Chief Executive's update and UK nations updates as benefits, but a prospective member never sees one. Showing the titles and a line of each, locked, is the cheapest way to make the case for joining. The groups list does the same for influence: full members can apply to join board sponsored groups and project teams, but the groups themselves aren't listed anywhere.</p></div>
+        </div>
+        <p class="proposal-foot">Sign-in is simulated: any email and password work. Briefing titles, group names and chairs are placeholders.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/members.html">Our members</a></li><li class="breadcrumb-item" aria-current="page">Member area</li></ol></nav>
+        <h1 data-when="out">Member area</h1>
+        <h1 id="welcome" data-when="in" hidden>Welcome back, [first name]</h1>
+        <p class="lead" data-when="out">Briefings, groups and events for people who work at ABPI member companies.</p>
+        <p class="lead" data-when="in" hidden>You're signed in as a member of [Company]. <button type="button" class="btn-link" data-signout>Sign out</button></p>
+      </div>
+    </div>
+
+    <div class="container pad-top" id="member-area">
+
+      <!-- Sign in (R23) -->
+      <section id="signin" aria-labelledby="signin-title" data-when="out">
+        <div class="split">
+          <form class="signin panel" id="signin-form" novalidate>
+            <h2 id="signin-title">Sign in</h2>
+            <div class="field" data-msg="Enter your work email address."><label for="si-email">Work email</label><input type="email" id="si-email" required autocomplete="username"></div>
+            <div class="field" data-msg="Enter your password."><label for="si-pass">Password</label><input type="password" id="si-pass" required autocomplete="current-password" class="pw"></div>
+            <button type="submit" class="btn btn-block">Sign in</button>
+            <p class="field-hint"><a href="#">Forgotten your password?</a> · <a href="#">First time here? Set up access</a></p>
+          </form>
+          <div>
+            <h2>Not a member?</h2>
+            <p>Anyone at a member company can have an account. If your company isn't a member yet, see what membership includes and which category fits you.</p>
+            <a class="btn btn-secondary" href="~/pages/join.html">About membership</a>
+            <p class="wf-note query" data-note="1"><span class="wf-note-label">Open question</span>What does the extranet run on today, and does it support single sign-on? The answer decides whether this page signs people in itself or hands them over.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Briefings: locked for visitors, open for members (R24) -->
+      <section aria-labelledby="brief-title">
+        <h2 class="section-title" id="brief-title">Latest member briefings</h2>
+        <div class="brief-list">
+          <article class="locked">
+            <span class="lock" data-when="out">Members only</span>
+            <p class="pub-meta"><span class="badge">Weekly update</span> <span>[Date]</span></p>
+            <h3>[Weekly update: VPAG, NICE methods and the week ahead in Parliament]</h3>
+            <p>[One-line summary of the briefing that a non-member can see.]</p>
+            <a class="btn btn-sm btn-secondary" href="#signin" data-unlock data-when="out">Sign in to read</a>
+            <a class="btn btn-sm" href="#" data-when="in" hidden>Read briefing</a>
+          </article>
+          <article class="locked">
+            <span class="lock" data-when="out">Members only</span>
+            <p class="pub-meta"><span class="badge">Chief Executive's update</span> <span>[Date]</span></p>
+            <h3>[Chief Executive's update: investment and the next Spending Review]</h3>
+            <p>[One-line summary.]</p>
+            <a class="btn btn-sm btn-secondary" href="#signin" data-unlock data-when="out">Sign in to read</a>
+            <a class="btn btn-sm" href="#" data-when="in" hidden>Read briefing</a>
+          </article>
+          <article class="locked">
+            <span class="lock" data-when="out">Members only</span>
+            <p class="pub-meta"><span class="badge">UK nations</span> <span>[Date]</span></p>
+            <h3>[Scotland, Wales and Northern Ireland: this month's update]</h3>
+            <p>[One-line summary.]</p>
+            <a class="btn btn-sm btn-secondary" href="#signin" data-unlock data-when="out">Sign in to read</a>
+            <a class="btn btn-sm" href="#" data-when="in" hidden>Read briefing</a>
+          </article>
+        </div>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>Visitors see the title and one line of each briefing, marked "Members only". Once signed in the lock goes and "Read briefing" appears. The same locked card can sit on public topic pages (see prototype 4).</p>
+      </section>
+
+      <!-- Groups (R25) -->
+      <section aria-labelledby="groups-title">
+        <div class="row between">
+          <h2 class="section-title" id="groups-title">Groups and committees</h2>
+          <div class="field" style="margin:0">
+            <label for="group-filter" class="visually-hidden">Show</label>
+            <select id="group-filter">
+              <option value="all">All groups</option>
+              <option value="board">Board sponsored groups</option>
+              <option value="network">Networks and forums</option>
+              <option value="nations">UK nations</option>
+            </select>
+          </div>
+        </div>
+        <p>Full members can apply to join any group whose terms of reference fit. Each group is chaired by a member company, with an ABPI lead.</p>
+        <div class="table-wrap">
+          <table class="groups-table">
+            <thead><tr><th scope="col">Group</th><th scope="col">What it does</th><th scope="col">Chair</th><th scope="col">Meets</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead>
+            <tbody>
+              <tr class="group-row" data-group-type="board"><th scope="row">[Value and access group]</th><td>[Pricing, NICE methods and VPAG]</td><td>[Member company]</td><td>[Monthly]</td><td><button type="button" class="btn btn-sm btn-secondary" data-group-join="[Value and access group]">Apply to join</button></td></tr>
+              <tr class="group-row" data-group-type="board"><th scope="row">[Clinical research group]</th><td>[Trial set-up, recruitment and data]</td><td>[Member company]</td><td>[Every six weeks]</td><td><button type="button" class="btn btn-sm btn-secondary" data-group-join="[Clinical research group]">Apply to join</button></td></tr>
+              <tr class="group-row" data-group-type="network"><th scope="row">Smaller Companies Committee</th><td>Issues affecting smaller and emerging companies; three members sit on the ABPI Board</td><td>[Member company]</td><td>[Quarterly]</td><td><button type="button" class="btn btn-sm btn-secondary" data-group-join="Smaller Companies Committee">Apply to join</button></td></tr>
+              <tr class="group-row" data-group-type="network"><th scope="row">[HR Directors forum]</th><td>[People, skills and pay]</td><td>[Member company]</td><td>[Quarterly]</td><td><button type="button" class="btn btn-sm btn-secondary" data-group-join="[HR Directors forum]">Apply to join</button></td></tr>
+              <tr class="group-row" data-group-type="nations"><th scope="row">Wales Board Sponsored Group</th><td>Members with an interest in Wales; works with Welsh Government and NHS Wales</td><td>[Member company]</td><td>[Quarterly]</td><td><button type="button" class="btn btn-sm btn-secondary" data-group-join="Wales Board Sponsored Group">Apply to join</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Is the ABPI comfortable listing groups and chairs publicly, or should the table sit behind sign-in with only the group names public?</p>
+      </section>
+
+      <!-- Member events (in the member area only when signed in) -->
+      <section aria-labelledby="mev-title" data-when="in" hidden>
+        <h2 class="section-title" id="mev-title">Your member events</h2>
+        <ul class="event-list">
+          <li><div class="event-date"><b>5</b>Nov</div><div><strong>ABPI Industry Summit 2026</strong><br><span class="muted">London · Members and invited guests</span></div><a class="btn btn-sm" href="~/pages/events.html">Book</a></li>
+          <li><div class="event-date"><b>[x]</b>[Mon]</div><div><strong>[Member briefing webinar]</strong><br><span class="muted">Online</span></div><a class="btn btn-sm btn-secondary" href="~/pages/events.html">Details</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Apply to join a group -->
+    <div class="wf-modal" id="apply-modal" role="dialog" aria-modal="true" aria-labelledby="apply-title">
+      <div class="wf-modal-panel">
+        <button type="button" class="wf-modal-close" aria-label="Close">×</button>
+        <h2 id="apply-title">Apply to join <span id="apply-group-name"></span></h2>
+        <form id="apply-form" novalidate>
+          <div class="field" data-msg="Enter your name."><label for="ap-name">Your name</label><input type="text" id="ap-name" required autocomplete="name"></div>
+          <div class="field" data-msg="Enter your work email address."><label for="ap-email">Work email</label><input type="email" id="ap-email" required autocomplete="email"></div>
+          <div class="field" data-msg="Tell the chair briefly why you'd like to join."><label for="ap-why">Why you'd like to join</label><textarea id="ap-why" rows="3" required></textarea></div>
+          <button type="submit" class="btn">Send application</button>
+        </form>
+        <div id="apply-done" class="confirm-box" hidden><div class="tick" aria-hidden="true">✓</div><h3>Application sent</h3><p>The group's ABPI lead will reply within [five] working days.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

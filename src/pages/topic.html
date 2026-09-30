@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical research — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Topic hub</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One layout for every policy topic: our position in a few lines, the key figures, the latest publications, a featured report with its findings and a suggested citation, related news and events, and the people to talk to. Shown here with clinical research.</p></div>
+          <div><h2>Why</h2><p>"Content hubs" currently has three entries, and the policy pages under "Our focus" each do things differently: some are a long page of text, some mix a graphic, positions and links. The material is all there. A consistent hub means a civil servant or a journalist who has used one topic page knows how to use the rest, and each page is fed from the publications library and news rather than kept up by hand.</p></div>
+        </div>
+        <p class="proposal-foot">Position points and figures come from the ABPI's clinical trials report and Facts and figures page. Names, roles and anything in [brackets] are placeholders.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="#">Our focus</a></li><li class="breadcrumb-item"><a href="#">Research, development and manufacturing</a></li><li class="breadcrumb-item" aria-current="page">Clinical research</li></ol></nav>
+        <h1>Clinical research</h1>
+        <p class="lead">Industry clinical trials bring new treatments to NHS patients early, income to the NHS and investment to the UK. We want the UK to be a first choice for them again.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top">
+      <!-- Position in brief (R44) -->
+      <section aria-labelledby="pos-title">
+        <div class="topic-hero">
+          <div class="position-box">
+            <h2 id="pos-title">Our position in brief</h2>
+            <ul>
+              <li>Less than a decade ago the UK was the leading European destination for industry clinical trials. Its recovery since the pandemic has been slower than other countries'.</li>
+              <li>Industry trials started in the UK rose to 578 in 2024, from 426 in 2023, but remain below the 667 of 2017.</li>
+              <li>The government's commitment to cut set-up times in England from 250 days to 150 needs to be delivered and tracked in the open.</li>
+              <li>[One more point the ABPI would want every visitor to take away.]</li>
+            </ul>
+            <p><a href="#">Read our full position</a></p>
+          </div>
+          <div class="panel surface">
+            <h2>Key figures</h2>
+            <dl class="kv">
+              <dt>Industry trials started, 2024</dt><dd>578</dd>
+              <dt>Patients recruited, 2024/25</dt><dd>19,092</dd>
+              <dt>NHS income from trials started 2022/23</dt><dd>£1.2bn</dd>
+            </dl>
+            <p class="field-hint">Sources: ABPI, Dec 2025; [source to be confirmed]; Frontier Economics, Dec 2024.</p>
+            <a class="btn btn-secondary btn-block" href="~/pages/data.html?topic=trials">See the trials tracker</a>
+          </div>
+        </div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Key figures come from the same statistics library as the Industry in numbers page, so they update in one place.</p>
+      </section>
+
+      <!-- Featured report (R45) -->
+      <section aria-labelledby="feat-title">
+        <h2 class="section-title" id="feat-title">Featured report</h2>
+        <div class="content-highlight">
+          <div class="wf-placeholder ratio-16-9">Report cover</div>
+          <div>
+            <p class="pub-meta"><span class="badge">Report</span> <span>December 2025</span> <span class="muted">· HTML + PDF · 40 min read</span></p>
+            <h3>UK industry clinical trials: Translating actions into impact</h3>
+            <h4>Key findings</h4>
+            <ul>
+              <li>[Key finding 1, one sentence]</li>
+              <li>[Key finding 2, one sentence]</li>
+              <li>[Key finding 3, one sentence]</li>
+            </ul>
+            <div class="row">
+              <a class="btn" href="#">Read the report</a>
+              <a class="btn btn-secondary" href="#">Download PDF</a>
+              <button type="button" class="btn btn-secondary" data-copy="ABPI (2025). UK industry clinical trials: Translating actions into impact. London: Association of the British Pharmaceutical Industry.">Copy citation</button>
+            </div>
+            <p class="cite-box">Suggested citation: ABPI (2025). <em>UK industry clinical trials: Translating actions into impact.</em> London: Association of the British Pharmaceutical Industry.</p>
+          </div>
+        </div>
+        <p class="wf-note" data-note="2"><span class="wf-note-label">Behaviour</span>The same key findings panel and citation appear at the top of the report page itself, with each chart downloadable as an image and as data.</p>
+      </section>
+
+      <!-- Latest publications (fed from the library) -->
+      <section aria-labelledby="pubs-title">
+        <div class="row between"><h2 class="section-title" id="pubs-title">Latest publications</h2><a href="~/pages/publications.html?theme=Clinical%20research">All clinical research publications</a></div>
+        <div data-pubs-theme="Clinical research" data-limit="4"></div>
+      </section>
+
+      <!-- Members only teaser (R24) -->
+      <section aria-labelledby="mem-title">
+        <h2 class="visually-hidden" id="mem-title">For members</h2>
+        <div class="locked">
+          <span class="lock">Members only</span>
+          <h3>[Clinical research group: briefing on the new trial regulations]</h3>
+          <p>[One-line summary a visitor can see.] Members read the full briefing in the member area.</p>
+          <div class="row"><a class="btn btn-sm" href="~/pages/member-area.html">Sign in to read</a><a class="btn btn-sm btn-secondary" href="~/pages/join.html">About membership</a></div>
+        </div>
+      </section>
+
+      <!-- News and events -->
+      <section aria-labelledby="ne-title">
+        <h2 class="section-title" id="ne-title">News and events</h2>
+        <div class="two-col">
+          <div>
+            <h3>News and blogs</h3>
+            <article class="result-item"><p class="pub-meta"><span class="badge">Blog</span> <span>14 July 2026</span></p><h4><a href="#">Why cross-sector collaboration in AI is the key to unlocking new medicines</a></h4></article>
+            <article class="result-item"><p class="pub-meta"><span class="badge">Blog</span> <span>13 August 2026</span></p><h4><a href="#">New pre-clinical translational models hub to accelerate development of human-relevant models</a></h4></article>
+            <p><a href="~/pages/media.html">All news</a></p>
+          </div>
+          <div>
+            <h3>Events</h3>
+            <ul class="event-list">
+              <li><div class="event-date"><b>[x]</b>[Mon]</div><div><strong>[Clinical research event]</strong><br><span class="muted">[Format · audience]</span></div><span class="badge">Booking open</span></li>
+            </ul>
+            <p><a href="~/pages/events.html">All events</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacts -->
+      <section aria-labelledby="people-title">
+        <h2 class="section-title" id="people-title">Talk to us about clinical research</h2>
+        <div class="people">
+          <div class="person"><div class="wf-placeholder avatar">Photo</div><div><b>[Name]</b><p>[Head of clinical research policy]</p><p><a href="#">Email</a></p></div></div>
+          <div class="person"><div class="wf-placeholder avatar">Photo</div><div><b>[Name]</b><p>[Policy manager, research]</p><p><a href="#">Email</a></p></div></div>
+          <div class="person"><div class="wf-placeholder avatar">Photo</div><div><b>Press office</b><p>pressoffice@abpi.org.uk</p><p>+44 (0)20 7747 7147</p></div></div>
+        </div>
+        <p class="wf-note query" data-note="3"><span class="wf-note-label">Open question</span>Is the ABPI happy to name policy leads on topic pages? Journalists and officials look for a name; a team inbox is the fallback.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

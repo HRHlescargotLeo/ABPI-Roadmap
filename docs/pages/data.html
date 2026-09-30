@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The industry in numbers — ABPI prototype</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces the ABPI's own header, R01) -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="ABPI prototypes, overview">ABPI <span>prototypes</span></a>
+      <nav aria-label="Prototypes">
+        <ul class="proto-links">
+          <li><a href="../index.html" data-proto="index">Overview</a></li>
+          <li><a href="../pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
+          <li><a href="../pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
+          <li><a href="../pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
+          <li><a href="../pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
+          <li><a href="../pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 3 of 5 · Industry in numbers</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Replace the Facts and figures page with a page built for the people who quote the ABPI's numbers. Figures are grouped by topic, each carries its source and date, and each can be copied with the source attached. Every topic has a chart with its data available to download, and two of the ABPI's strongest arguments, clinical trials and access to medicines, get views of their own.</p></div>
+          <div><h2>Why</h2><p>The current page has the right figures, but two captions stop mid-word ("a significantly lower pro"), and some figures cite references [9] and [12] when the list ends at [7]. The homepage repeats three of the figures with reference numbers that point nowhere on that page. Jobs are given as 125,702 on this page and "over 73,000" on the Careers page, which may well be two different measures, but nothing says so. A journalist or a civil servant who notices any of this is less likely to trust the rest.</p></div>
+        </div>
+        <p class="proposal-foot">Headline figures and sources are as published on abpi.org.uk. Chart values other than the published figures, the set-up time tracker and the access counts are sample data. Items in [brackets] need the ABPI to confirm.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Our industry</p>
+        <h1>The industry in numbers</h1>
+        <p class="lead">The pharmaceutical industry's contribution to the UK's economy, research and health, with the source for every figure.</p>
+        <p class="wf-meta">Figures last checked [30 September 2026]. Sub-national figures are on the <a href="#">Pharmaceutical Impact Map</a>.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top">
+      <!-- Figures by topic (R30–R32, R35) -->
+      <section id="data-app" aria-labelledby="topics-title">
+        <h2 class="visually-hidden" id="topics-title">Figures by topic</h2>
+        <div class="tabs scroll-tabs" id="topic-tabs" role="tablist" aria-label="Topics">
+          <button type="button" class="tab" role="tab" id="tab-economy" data-topic="economy" aria-controls="topic-panel">Economy</button>
+          <button type="button" class="tab" role="tab" id="tab-rd" data-topic="rd" aria-controls="topic-panel">Research and development</button>
+          <button type="button" class="tab" role="tab" id="tab-trials" data-topic="trials" aria-controls="topic-panel">Clinical trials</button>
+          <button type="button" class="tab" role="tab" id="tab-access" data-topic="access" aria-controls="topic-panel">Access to medicines</button>
+          <button type="button" class="tab" role="tab" id="tab-people" data-topic="people" aria-controls="topic-panel">People</button>
+        </div>
+        <div id="topic-panel" role="tabpanel" tabindex="0"></div>
+        <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>The chosen topic is kept in the address (?topic=trials), so a link can open straight onto it. Arrow keys move between topics. "Copy with source" puts the figure, its caption, source and date on the clipboard in one line.</p>
+        <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Figures with dashed borders have a caption or source that is cut off or missing on the live page. Can the ABPI supply the complete wording and references?</p>
+        <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>In the CMS each figure would be entered once, with its source and date, and reused wherever it appears, so the homepage and this page can't drift apart.</p>
+      </section>
+
+      <!-- Clinical trials tracker (R33) -->
+      <section aria-labelledby="trials-title">
+        <h2 class="section-title" id="trials-title">Clinical trials: are set-up times coming down?</h2>
+        <div class="two-col">
+          <div>
+            <p>The government has committed to cutting the time it takes to set up a commercial clinical trial in England from 250 days to 150. This tracker shows the median set-up time each quarter against that target.</p>
+            <p>Read more in our report <a href="../pages/topic.html">UK industry clinical trials: Translating actions into impact</a> and on the <a href="../pages/topic.html">clinical research topic page</a>.</p>
+            <div class="cite-box">Median set-up time, [source], updated quarterly. <strong>Values shown are sample data.</strong></div>
+          </div>
+          <div class="chart-box">
+            <h3>Median days from submission to first patient</h3>
+            <div id="setup-chart"></div>
+            <p class="chart-note">Dashed line: the 150-day target.</p>
+          </div>
+        </div>
+        <p class="wf-note query" data-note="4"><span class="wf-note-label">Open question</span>Which data source should drive this: the ABPI's own analysis, NIHR or the Department of Health? It needs to be one the ABPI can update each quarter without a rebuild.</p>
+      </section>
+
+      <!-- Access to medicines (R34) -->
+      <section aria-labelledby="access-title">
+        <h2 class="section-title" id="access-title">Access to medicines in England</h2>
+        <p>Every new use of a medicine approved between 2022 and 2025, tracked through to whether NHS patients in England can get it.</p>
+        <div id="access-app" class="chart-box">
+          <div class="filter-row">
+            <div class="field"><label for="acc-year">Year approved</label><select id="acc-year"><option value="all">2022 to 2025</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option></select></div>
+            <div class="field"><label for="acc-area">Therapy area</label><select id="acc-area"><option value="all">All therapy areas</option><option>Oncology</option><option>Rare diseases</option><option>Immunology</option><option>Neuroscience</option></select></div>
+          </div>
+          <div id="acc-out" aria-live="polite"></div>
+          <p class="chart-note">Counts are sample data. The live page shows this as a static graphic.</p>
+        </div>
+        <p class="wf-note" data-note="5"><span class="wf-note-label">Behaviour</span>Choosing a year or therapy area updates the headline sentence and the bar together, so the sentence can be quoted as it stands.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces the ABPI's own footer) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Sample data where marked</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/wireframe.js"></script>
+</body>
+</html>

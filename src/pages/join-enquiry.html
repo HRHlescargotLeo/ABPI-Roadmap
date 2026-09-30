@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership enquiry — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 1 of 5 · Membership enquiry</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>An enquiry in three short steps that goes straight to Membership Services, with the category filled in if the visitor came from the checker. The formal application, with a signature, comes later and only for companies that go ahead.</p></div>
+          <div><h2>Why</h2><p>The current route asks for a full, signed application before anyone at the ABPI has spoken to the company. Splitting enquiry from application means the team hears from more companies, earlier, and the questions asked at this stage are only the ones needed to have a useful first conversation.</p></div>
+        </div>
+        <p class="proposal-foot">Nothing is sent from this prototype. The fields are a starting point for the membership team to adjust.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="breadcrumb-list"><li class="breadcrumb-item"><a href="~/pages/join.html">Join the ABPI</a></li><li class="breadcrumb-item" aria-current="page">Enquiry</li></ol></nav>
+        <h1>Enquire about membership</h1>
+        <p class="lead">Takes about five minutes. We'll call you within [two] working days to talk it through and confirm your fee.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top">
+      <div class="split">
+        <div>
+          <ol class="stepper" aria-label="Progress">
+            <li>Your organisation</li>
+            <li>Your work in the UK</li>
+            <li>Your details</li>
+          </ol>
+
+          <!-- Stepped enquiry (R16) -->
+          <form id="enquiry-form" novalidate>
+            <div class="step-panel">
+              <h2>Your organisation</h2>
+              <div class="field" data-msg="Enter your organisation's name.">
+                <label for="enq-org">Organisation name</label>
+                <input type="text" id="enq-org" required autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="enq-web">Website <span class="muted">(optional)</span></label>
+                <input type="url" id="enq-web" placeholder="www.example.com" autocomplete="url">
+              </div>
+              <div class="field" data-msg="Choose the membership you're interested in, or 'Not sure'.">
+                <label for="enq-type">Membership you're interested in</label>
+                <select id="enq-type" required>
+                  <option value="">Choose one</option>
+                  <option value="full">Full membership</option>
+                  <option value="research">Research affiliate</option>
+                  <option value="general">General affiliate</option>
+                  <option value="unsure">Not sure yet</option>
+                </select>
+                <p class="field-hint" id="enq-type-note" hidden></p>
+                <p class="field-hint"><a href="~/pages/join.html#checker">Not sure? Use the checker</a></p>
+              </div>
+              <div class="step-nav"><span></span><button type="button" class="btn" data-step-next>Continue</button></div>
+            </div>
+
+            <div class="step-panel" hidden>
+              <h2>Your work in the UK</h2>
+              <fieldset class="field" data-min="1" data-msg="Choose at least one.">
+                <legend>What do you do in the UK? Choose all that apply.</legend>
+                <div class="check-grid">
+                  <label class="check"><input type="checkbox" name="enq-activity" id="act-supply" value="Supply prescription medicines"> Supply prescription medicines</label>
+                  <label class="check"><input type="checkbox" name="enq-activity" id="act-mfr" value="Manufacturing"> Manufacturing</label>
+                  <label class="check"><input type="checkbox" name="enq-activity" id="act-rd" value="Research and development"> Research and development</label>
+                  <label class="check"><input type="checkbox" name="enq-activity" id="act-trials" value="Clinical trials"> Clinical trials</label>
+                  <label class="check"><input type="checkbox" name="enq-activity" id="act-services" value="Services to the industry"> Services to the industry</label>
+                  <label class="check"><input type="checkbox" name="enq-activity" id="act-other" value="Other"> Something else</label>
+                </div>
+              </fieldset>
+              <fieldset class="field">
+                <legend>Therapy areas <span class="muted">(optional)</span></legend>
+                <div class="check-grid">
+                  <label class="check"><input type="checkbox" name="enq-areas" id="ar-onc" value="Oncology"> Oncology</label>
+                  <label class="check"><input type="checkbox" name="enq-areas" id="ar-imm" value="Immunology"> Immunology</label>
+                  <label class="check"><input type="checkbox" name="enq-areas" id="ar-neu" value="Neuroscience"> Neuroscience</label>
+                  <label class="check"><input type="checkbox" name="enq-areas" id="ar-rare" value="Rare diseases"> Rare diseases</label>
+                  <label class="check"><input type="checkbox" name="enq-areas" id="ar-vac" value="Vaccines and infectious disease"> Vaccines and infectious disease</label>
+                  <label class="check"><input type="checkbox" name="enq-areas" id="ar-cvm" value="Cardiovascular and metabolic"> Cardiovascular and metabolic</label>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="enq-size">People employed in the UK <span class="muted">(optional)</span></label>
+                <select id="enq-size">
+                  <option value="">Choose one</option>
+                  <option value="1">Fewer than 50</option>
+                  <option value="2">50 to 249</option>
+                  <option value="3">250 to 999</option>
+                  <option value="4">1,000 or more</option>
+                </select>
+                <p class="field-hint">Helps us estimate your fee before we call.</p>
+              </div>
+              <div class="step-nav"><button type="button" class="btn btn-secondary" data-step-back>Back</button><button type="button" class="btn" data-step-next>Continue</button></div>
+            </div>
+
+            <div class="step-panel" hidden>
+              <h2>Your details</h2>
+              <div class="form-grid">
+                <div class="field" data-msg="Enter your first name."><label for="enq-first">First name</label><input type="text" id="enq-first" required autocomplete="given-name"></div>
+                <div class="field" data-msg="Enter your last name."><label for="enq-last">Last name</label><input type="text" id="enq-last" required autocomplete="family-name"></div>
+                <div class="field" data-msg="Enter your job title."><label for="enq-role">Job title</label><input type="text" id="enq-role" required autocomplete="organization-title"></div>
+                <div class="field" data-msg="Enter your work email address."><label for="enq-email">Work email</label><input type="email" id="enq-email" required autocomplete="email"></div>
+                <div class="field full"><label for="enq-phone">Phone <span class="muted">(optional)</span></label><input type="tel" id="enq-phone" autocomplete="tel"></div>
+                <div class="field full"><label for="enq-msg">Anything you'd like us to know <span class="muted">(optional)</span></label><textarea id="enq-msg" rows="3"></textarea></div>
+              </div>
+              <h3>Check your answers</h3>
+              <dl class="kv review-list" id="enq-review"></dl>
+              <p><button type="button" class="btn-link" data-step-go="0">Change organisation details</button> · <button type="button" class="btn-link" data-step-go="1">Change UK work</button></p>
+              <div class="field" data-msg="Please confirm you're happy for us to contact you.">
+                <label class="check"><input type="checkbox" id="enq-consent" required> I'm happy for the ABPI to contact me about membership.</label>
+              </div>
+              <div class="step-nav"><button type="button" class="btn btn-secondary" data-step-back>Back</button><button type="submit" class="btn">Send enquiry</button></div>
+            </div>
+          </form>
+          <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Each step checks its own fields before moving on and explains what's missing. The last step shows the answers so far, with links back to change them.</p>
+
+          <!-- Confirmation (R17) -->
+          <div id="enquiry-done" class="confirm-box" role="status" hidden>
+            <div class="tick" aria-hidden="true">✓</div>
+            <h2>Thank you, <span id="done-name"></span></h2>
+            <p>We've received the enquiry for <strong id="done-org"></strong>. Your reference is <strong id="done-ref"></strong>.</p>
+            <ol class="timeline in-box">
+              <li><div><b>Confirmation email</b><p>On its way to <span id="done-email"></span>.</p></div></li>
+              <li><div><b>A call from Membership Services</b><p>Within [two] working days, to talk it through and confirm your fee.</p></div></li>
+              <li><div><b>A short online application</b><p>If you decide to go ahead.</p></div></li>
+            </ol>
+            <p><a class="btn btn-secondary" href="~/pages/members.html">See who's already a member</a></p>
+          </div>
+        </div>
+
+        <aside class="panel surface">
+          <h2>Before you start</h2>
+          <p>You'll need your organisation's name and a rough idea of what you do in the UK. Everything else is optional.</p>
+          <h2>Prefer to talk?</h2>
+          <p>Membership Services<br>membership@abpi.org.uk<br>0207 747 1414</p>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Should the enquiry go to the membership inbox, or into the ABPI's CRM directly?</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>

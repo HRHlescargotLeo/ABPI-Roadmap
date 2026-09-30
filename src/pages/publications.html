@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — ABPI prototype</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body>
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <aside class="proposal" aria-label="About this prototype">
+      <div class="container">
+        <p class="proposal-eyebrow">Prototype 4 of 5 · Publications</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A search box at the top of the publications library, twelve themes that match the "Our focus" menu in place of around 38, a type filter that includes consultation responses, and a date, type, format and written summary on every result.</p></div>
+          <div><h2>Why</h2><p>The library holds 131 publications and the only way to search it is the site-wide search in the header. The theme filter has grown one tag at a time: many themes hold a single item, and some are near-duplicates ("ATMP" and "Advanced Therapy Medicinal Products (ATMPs)"; "Clinical research" and "Clinical trials", seven items each). Several results show breadcrumb text in place of a summary, and none shows a date. The content is good. It's the library around it that makes it hard to find.</p></div>
+        </div>
+        <p class="proposal-foot">Titles are real. Some dates, all reading times and the two consultation responses are sample data, and are marked as such.</p>
+      </div>
+    </aside>
+
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">Publications</p>
+        <h1>Publications</h1>
+        <p class="lead">Our reports, positions, guidance and consultation responses.</p>
+      </div>
+    </div>
+
+    <div class="container pad-top" id="library">
+      <!-- Library search (R40) -->
+      <form class="lib-search" id="lib-form" role="search">
+        <div class="field">
+          <label for="lib-q">Search publications</label>
+          <div class="search-row"><input type="search" id="lib-q" placeholder="For example: clinical trials, VPAG, rare diseases"><button type="submit" class="btn">Search</button></div>
+        </div>
+        <p class="lib-suggest"><span class="muted">Popular:</span> <a href="#" data-lib-suggest>clinical trials</a><a href="#" data-lib-suggest>health data</a><a href="#" data-lib-suggest>NICE</a><a href="#" data-lib-suggest>supply</a></p>
+      </form>
+      <p class="wf-note" data-note="1"><span class="wf-note-label">Behaviour</span>Results update as you type. A search switches the sort to "Most relevant"; the query and theme are kept in the address, so a filtered list can be shared.</p>
+
+      <div class="lib-layout">
+        <!-- Filters (R41) -->
+        <aside class="lib-filters" aria-label="Filter publications">
+          <div class="field"><label for="lib-theme">Theme</label><select id="lib-theme"><option value="all">All themes</option></select></div>
+          <fieldset class="field"><legend>Type</legend><div id="lib-types"></div></fieldset>
+          <div class="field"><label for="lib-year">Year</label><select id="lib-year"><option value="all">Any year</option><option>2026</option><option>2025</option><option>2024</option></select></div>
+          <p class="wf-note query" data-note="2"><span class="wf-note-label">Open question</span>Are these twelve themes the right set? We based them on the "Our focus" menu. Retagging the back catalogue is a one-off job.</p>
+        </aside>
+
+        <!-- Results (R42, R43) -->
+        <div>
+          <div class="results-toolbar">
+            <p class="result-count" id="lib-count" aria-live="polite" style="margin:0"></p>
+            <div class="field"><label for="lib-sort" class="visually-hidden">Sort by</label><select id="lib-sort"><option value="new">Newest first</option><option value="relevance">Most relevant</option><option value="old">Oldest first</option></select></div>
+          </div>
+          <div class="active-filters" id="lib-chips"></div>
+          <div id="lib-results"></div>
+          <div class="load-more" id="lib-more"><button type="button" class="btn btn-secondary">Show more</button></div>
+          <p class="wf-note" data-note="3"><span class="wf-note-label">Behaviour</span>Every result shows type, date, format and reading time, and a summary written for the listing. The CMS makes the summary a required field so breadcrumb text can't fill it.</p>
+        </div>
+      </div>
+
+      <section aria-labelledby="topics-title" class="pad-top">
+        <h2 class="section-title" id="topics-title">Browse by topic</h2>
+        <div class="hub-tiles">
+          <a class="hub-tile" href="~/pages/topic.html"><h3>Clinical research</h3><p>Our position, the trials tracker, reports and who to talk to.</p></a>
+          <a class="hub-tile" href="#"><h3>Value and access</h3><p>NICE, VPAG and getting medicines to NHS patients.</p></a>
+          <a class="hub-tile" href="#"><h3>Health data</h3><p>The Health Data Research Service and trusted data use.</p></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/wireframe.js"></script>
+</body>
+</html>
