@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A proper summary and date on every publication — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="pubs">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 12 of 34 · Publications</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Every result shows its type, date and format, with a summary written for the listing.</p></div>
+          <div><h2>Why</h2><p>Several results in the publications library show breadcrumb text where the summary should be, and none of them shows a date. Making the summary a required field in the CMS stops it happening again; showing the date and type is a template change.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW12: A proper summary and date on every publication (R-QW12, idea #21) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW12 · Publications</p>
+        <h1>A proper summary and date on every publication</h1>
+        <p class="lead">Every result shows its type, date and format, with a summary written for the listing.</p>
+        <p class="qw-where">Also part of prototype 4, Publications.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Breadcrumb text in place of a summary, and no date.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/publications/</span></div>
+            <div class="ba-frame-body">
+<article class="mock-result"><h4>Pharmaceutical industry priorities for the Health Data Research Service</h4><p>ABPI Website, Publications, Pharmaceutical industry priorities for the Health Data Research Service, Pharmaceutical industry priorities for the Health Data Research Service, Published on: 20 August ...</p></article>
+<article class="mock-result"><h4>A guide to the development and manufacture of medicines</h4><p>ABPI Website, Publications, A guide to the development and manufacture of medicines, A guide to the development and manufacture of medicines, Published on: 01 July ...</p></article>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Type, date, format and a written summary.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/publications/</span></div>
+            <div class="ba-frame-body">
+<article class="pub-card"><p class="pub-meta"><span class="badge">Position</span> <span>20 Aug 2026</span> <span class="muted">· HTML · 8 min read</span></p><h3><a href="#">Pharmaceutical industry priorities for the Health Data Research Service</a></h3><p class="pub-summary">What the industry needs from the new Health Data Research Service to make the UK a first choice for data-enabled research.</p><p class="pub-theme muted">Health data</p></article>
+<article class="pub-card"><p class="pub-meta"><span class="badge">Guidance</span> <span>1 Jul 2026</span> <span class="muted">· PDF · 15 min read</span></p><h3><a href="#">A guide to the development and manufacture of medicines</a></h3><p class="pub-summary">How a medicine goes from discovery to the patient, written for readers new to the industry.</p><p class="pub-theme muted">Research and manufacturing</p></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

@@ -263,28 +263,64 @@
 
   /* --- Prototype navigator: current page and previous / next ------------- */
   function initProtoNav() {
-    var file = (window.location.pathname.split('/').pop() || 'index.html').replace('.html', '') || 'index';
-    var links = Array.prototype.slice.call(document.querySelectorAll('.proto-links a[data-proto]'));
+    var path = window.location.pathname;
+    var file = (path.split('/').pop() || 'index.html').replace('.html', '') || 'index';
+    var quick = /\/quick-wins\//.test(path) || document.body.hasAttribute('data-qw-theme') || document.body.classList.contains('qw-index');
+    function label(a) { return a.textContent.replace(/\s+/g, ' ').trim(); }
+
+    /* Tabs and the matching sub-navigation */
+    document.querySelectorAll('[data-section-link]').forEach(function (a) {
+      var on = (a.getAttribute('data-section-link') === 'quick') === quick;
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    document.querySelectorAll('.proto-subnav [data-section]').forEach(function (n) {
+      n.hidden = (n.getAttribute('data-section') === 'quick') !== quick;
+    });
+
+    var pager = document.querySelector('[data-proto-pager]');
+    var html = '';
+
+    /* Quick wins tab: previous / next run through the quick wins only. */
+    if (quick) {
+      var theme = document.body.getAttribute('data-qw-theme') || 'index';
+      document.querySelectorAll('[data-qw-link]').forEach(function (a) {
+        if (a.getAttribute('data-qw-link') === theme) a.setAttribute('aria-current', 'page');
+      });
+      var list = window.ABPI_QUICK_WINS || [];
+      var at = -1;
+      for (var i = 0; i < list.length; i++) if (list[i].slug === file) at = i;
+      if (!pager) return;
+      if (at < 0) {
+        if (list.length) html = '<span></span><a class="next" href="' + list[0].slug + '.html"><span class="wf-meta">Start with</span>QW1 ' + list[0].title + '</a>';
+      } else {
+        html += at > 0 ? '<a class="prev" href="' + list[at - 1].slug + '.html"><span class="wf-meta">Previous</span>QW' + at + ' ' + list[at - 1].title + '</a>'
+                       : '<a class="prev" href="index.html"><span class="wf-meta">Back to</span>All quick wins</a>';
+        html += at < list.length - 1 ? '<a class="next" href="' + list[at + 1].slug + '.html"><span class="wf-meta">Next</span>QW' + (at + 2) + ' ' + list[at + 1].title + '</a>'
+                                     : '<a class="next" href="index.html"><span class="wf-meta">Back to</span>All quick wins</a>';
+      }
+      pager.innerHTML = html;
+      return;
+    }
+
+    /* Big improvements tab */
+    var links = Array.prototype.slice.call(document.querySelectorAll('[data-section="major"] .proto-links a[data-proto]'));
     var index = -1;
     links.forEach(function (a, i) {
       var match = a.getAttribute('data-proto').split(' ').indexOf(file) !== -1;
       if (match) { a.setAttribute('aria-current', 'page'); index = i; }
     });
     var current = document.querySelector('.proto-links a[aria-current]');
-    if (current && current.scrollIntoView && window.innerWidth < 1024) {
-      var list = current.closest('.proto-links');
-      if (list) list.scrollLeft = current.offsetLeft - 16;
+    if (current && window.innerWidth < 1024) {
+      var ul = current.closest('.proto-links');
+      if (ul) ul.scrollLeft = current.offsetLeft - 16;
     }
-    var pager = document.querySelector('[data-proto-pager]');
     if (!pager || index < 0) return;
-    function label(a) { return a.textContent.replace(/\s+/g, ' ').trim(); }
-    var html = '';
     if (index > 0) html += '<a class="prev" href="' + links[index - 1].getAttribute('href') + '"><span class="wf-meta">Previous</span>' + label(links[index - 1]) + '</a>';
     else html += '<span></span>';
     if (index < links.length - 1) html += '<a class="next" href="' + links[index + 1].getAttribute('href') + '"><span class="wf-meta">Next</span>' + label(links[index + 1]) + '</a>';
+    else html += '<a class="next" href="' + links[0].getAttribute('href') + '"><span class="wf-meta">Back to</span>Big improvements overview</a>';
     pager.innerHTML = html;
   }
-
 
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
@@ -505,7 +541,7 @@
       $('p', result).textContent = r.body;
       var go = $('[data-checker-go]', result);
       go.hidden = !r.type;
-      if (r.type) go.setAttribute('href', 'join-enquiry.html?type=' + r.type);
+      if (r.type) go.setAttribute('href', (box.getAttribute('data-enquiry') || 'join-enquiry.html') + '?type=' + r.type);
       $all('[data-cat-card]').forEach(function (c) { c.classList.toggle('is-match', c.getAttribute('data-cat-card') === key); });
       result.hidden = false;
     }
@@ -1067,6 +1103,72 @@
     render();
   }
 
+  /* --- Quick wins: Today / Proposed switch (R07) -------------------------
+     Markup: [data-ba] containing buttons [data-ba-show="before|after"] and
+     panels .ba-before / .ba-after. Starts on "Today" so a reviewer sees the
+     current site first; the choice holds while moving between quick wins. */
+  function initBeforeAfter() {
+    var boxes = $all('[data-ba]');
+    if (!boxes.length) return;
+    var stored = null;
+    try { stored = window.sessionStorage.getItem('abpi-ba'); } catch (e) { /* private mode */ }
+    boxes.forEach(function (box) {
+      var buttons = $all('[data-ba-show]', box);
+      function show(which, remember) {
+        box.setAttribute('data-ba-state', which);
+        $all('.ba-before', box).forEach(function (p) { p.hidden = which !== 'before'; });
+        $all('.ba-after', box).forEach(function (p) { p.hidden = which !== 'after'; });
+        buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-ba-show') === which ? 'true' : 'false'); });
+        if (remember) { try { window.sessionStorage.setItem('abpi-ba', which); } catch (e) { /* private mode */ } }
+      }
+      buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-ba-show'), true); }); });
+      show(stored === 'after' ? 'after' : 'before', false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.target.closest && e.target.closest('input, select, textarea, [contenteditable]')) return;
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      var b = $('[data-ba-show="' + (e.key === 'ArrowLeft' ? 'before' : 'after') + '"]');
+      if (b) b.click();
+    });
+  }
+
+  /* --- Quick wins: small interactive demos ------------------------------ */
+  function initQuickWinDemos() {
+    /* Forms that only need validating and a confirmation */
+    $all('form[data-qw-form]').forEach(function (f) {
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!validate(f)) return;
+        var done = document.getElementById(f.getAttribute('data-qw-form'));
+        f.hidden = true;
+        if (done) { done.hidden = false; done.setAttribute('tabindex', '-1'); done.focus(); }
+      });
+    });
+    /* Mock dropdown menus: click to open, Escape or a click outside closes */
+    $all('.mock-menu').forEach(function (m) {
+      var t = $('.mock-menu-trigger', m);
+      if (!t) return;
+      function set(open) { m.classList.toggle('open', open); t.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      t.addEventListener('click', function () { set(!m.classList.contains('open')); });
+      m.addEventListener('keydown', function (e) { if (e.key === 'Escape') { set(false); t.focus(); } });
+      document.addEventListener('click', function (e) { if (!m.contains(e.target)) set(false); });
+    });
+    /* Glossary popovers */
+    $all('[data-pop]').forEach(function (b) {
+      var pop = document.getElementById(b.getAttribute('data-pop'));
+      if (!pop) return;
+      function set(open) { pop.hidden = !open; b.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      b.addEventListener('click', function (e) { e.preventDefault(); set(pop.hidden); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !pop.hidden) { set(false); b.focus(); } });
+      document.addEventListener('click', function (e) { if (!pop.hidden && e.target !== b && !pop.contains(e.target)) set(false); });
+    });
+    /* Links inside mock pages go nowhere, and say so */
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('.ba-frame a[href="#"]');
+      if (a) { e.preventDefault(); toast('Not part of this quick win.'); }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
     initAccordions();
@@ -1088,5 +1190,7 @@
     initMedia();
     initEvents();
     initCopy();
+    initBeforeAfter();
+    initQuickWinDemos();
   });
 })();

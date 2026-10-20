@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&quot;Which membership fits us?&quot; checker — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="join">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 1 of 34 · Joining the ABPI</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Three short questions that tell a company which of the three membership categories it fits, with a link to enquire.</p></div>
+          <div><h2>Why</h2><p>The three categories are explained in paragraphs spread across four pages, reached through a "Please select the area…" dropdown. A company has to read all of them to work out where it fits. Three questions do the same job in a few seconds, and the answer can carry straight into an enquiry.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW1: &quot;Which membership fits us?&quot; checker (R-QW1, idea #2) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW1 · Joining the ABPI</p>
+        <h1>&quot;Which membership fits us?&quot; checker</h1>
+        <p class="lead">Three short questions that tell a company which of the three membership categories it fits, with a link to enquire.</p>
+        <p class="qw-where">Also part of prototype 1, Join the ABPI.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>The categories are separate pages behind a dropdown, each a few paragraphs long.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership/</span></div>
+            <div class="ba-frame-body">
+<div class="mock-head"><p class="mock-crumb">ABPI Website › Membership</p><h2 class="mock-h1">Membership</h2></div><div class="mock-select"><span>Please select the area…</span><span aria-hidden="true">▾</span></div>
+<ul class="mock-list"><li>Full membership</li><li>Research affiliate membership</li><li>General affiliate membership</li><li>Membership FAQs</li></ul>
+<p>We offer three different types of membership. Full Members represent many established research-based pharmaceutical companies. Our Research Affiliate members are companies that carry out their business in the UK and are engaged in the research or development or both of medicines for human use, but which have no sales of such products in the UK. General Affiliate membership is open to organisations with an interest in the pharmaceutical industry that operate in the UK.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Three questions, a recommendation and a link to enquire. Try it.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership/</span></div>
+            <div class="ba-frame-body">
+<form class="checker" id="checker" data-enquiry="../pages/join-enquiry.html" novalidate>
+<p class="muted">Three questions at most. Nothing is sent to us.</p>
+<fieldset data-q><legend>Does your organisation operate in the UK?</legend><div class="opts"><label><input type="radio" name="q-uk" value="yes" id="q-uk-yes"> Yes</label><label><input type="radio" name="q-uk" value="no" id="q-uk-no"> No</label></div></fieldset>
+<fieldset data-q hidden><legend>Do you supply or manufacture prescription medicines in the UK, or hold a UK marketing authorisation?</legend><div class="opts"><label><input type="radio" name="q-sells" value="yes" id="q-sells-yes"> Yes</label><label><input type="radio" name="q-sells" value="no" id="q-sells-no"> No</label></div></fieldset>
+<fieldset data-q hidden><legend>Do you research or develop medicines in the UK?</legend><div class="opts"><label><input type="radio" name="q-rd" value="yes" id="q-rd-yes"> Yes</label><label><input type="radio" name="q-rd" value="no" id="q-rd-no"> No, we work with companies that do</label></div></fieldset>
+<div class="checker-result" id="checker-result" role="status" hidden><h3>Result</h3><p></p><div class="row"><a class="btn" href="../pages/join-enquiry.html" data-checker-go>Start an enquiry</a><button type="button" class="btn btn-secondary" data-checker-reset>Start again</button></div></div>
+</form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

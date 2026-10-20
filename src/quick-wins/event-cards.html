@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event cards that fit — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="events">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 21 of 34 · Events</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Shorter descriptions on event cards, with format, audience and price shown as labels.</p></div>
+          <div><h2>Why</h2><p>On the homepage the event tiles print their full descriptions, so one long description stretches the whole row to over a thousand pixels tall. Cards say "Physical Public &amp; Paid" but not the price. Limiting descriptions to three lines and showing the essentials as labels is a template change.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW21: Event cards that fit (R-QW21, idea #33) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW21 · Events</p>
+        <h1>Event cards that fit</h1>
+        <p class="lead">Shorter descriptions on event cards, with format, audience and price shown as labels.</p>
+        <p class="qw-where">Also part of prototype 5, Stay informed.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Full descriptions; one long one stretches the row.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="tile-row"><div class="mock-tile"><p class="mock-meta">06 October 2026 09:15 - 16:30 EVENT</p><h4>NICE/DTSU/ABPI Masterclass</h4><p>The NICE/DTSU/ABPI Masterclasses are unique in being focused solely on the specific requirements of NICE and its Appraisal Committees and on the challenges associated with key areas of evidence generation and methodology.</p></div>
+<div class="mock-tile"><p class="mock-meta">10 November 2026 08:00 - 16:20 EVENT</p><h4>Global Pharma &amp; Biotech Summit</h4><p>The Global Pharma and Biotech Summit, organised by the Financial Times, brings together the leaders, investors and policymakers shaping the next phase of life sciences. Hear from 60+ expert speakers from organisations including Novartis, GSK, Novo Nordisk, Takeda, Bayer and the Medicines and Healthcare products Regulatory Agency (MHRA) as they explore geopolitical and economic disruption, AI, regulation, market access and the rise of new pharmaceutical innovation hubs.</p></div>
+<div class="mock-tile"><p class="mock-meta">22 April 2027 09:30 - 18:30 EVENT</p><h4>SAVE THE DATE - ABPI Annual Conference 2027</h4><p>Save the date for the ABPI Annual Conference 2027, the UK pharmaceutical industry's flagship event bringing together senior leaders, policymakers, clinicians and stakeholders from across the life sciences sector. The conference provides a platform for open dialogue on the issues shaping the future of medicines development, access and innovation in the UK. Full programme details, speakers and session themes will be announced in due course. Check back for updates, or register your interest to be notified as soon as further information is available.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Three lines of description, with format, audience and price as labels.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="tile-row"><div class="mock-tile fit"><p class="event-tags"><span class="badge solid">Few places left</span><span class="tag">In person</span></p><p class="mock-meta">6 October 2026 · 09:15–16:30</p><h4>NICE/DTSU/ABPI Masterclass</h4><p class="event-desc">Focused solely on the requirements of NICE and its Appraisal Committees, and on the challenges in key areas of evidence generation and methodology.</p><p class="event-price"><span class="muted">Price:</span> [£]</p></div>
+<div class="mock-tile fit"><p class="event-tags"><span class="badge">Partner event</span><span class="tag">In person</span></p><p class="mock-meta">10–11 November 2026 · 08:00–16:20</p><h4>Global Pharma &amp; Biotech Summit</h4><p class="event-desc">Organised by the Financial Times. Leaders, investors and policymakers on geopolitical and economic disruption, AI, regulation and market access.</p><p class="event-price"><span class="muted">Price:</span> Booked through the organiser</p></div>
+<div class="mock-tile fit"><p class="event-tags"><span class="badge">Register interest</span><span class="tag">In person</span></p><p class="mock-meta">22 April 2027 · 09:30–18:30</p><h4>ABPI Annual Conference 2027</h4><p class="event-desc">The UK pharmaceutical industry's flagship event. Programme and speakers to be announced.</p><p class="event-price"><span class="muted">Price:</span> To be announced</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

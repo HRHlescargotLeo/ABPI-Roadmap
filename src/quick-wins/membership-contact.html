@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A named membership contact — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="join">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 4 of 34 · Joining the ABPI</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A contact card with a name, role, email and phone on each membership page.</p></div>
+          <div><h2>Why</h2><p>The only route to the membership team on the main membership page is a phone number at the end of the last paragraph, and it differs from the number in the footer. A company thinking about joining is more likely to pick up the phone to a named person than to a department.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW4: A named membership contact (R-QW4, idea #5) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW4 · Joining the ABPI</p>
+        <h1>A named membership contact</h1>
+        <p class="lead">A contact card with a name, role, email and phone on each membership page.</p>
+        <p class="qw-where">Also part of prototype 1, Join the ABPI.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>A phone number at the end of a long page.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership/</span></div>
+            <div class="ba-frame-body">
+<p>…There are many benefits of becoming a member of the ABPI and we are always happy to visit companies and discuss these in greater detail. If you would like to arrange a company visit, please contact the Membership Services – 0207 747 1414.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>A contact card next to the call to action.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership/</span></div>
+            <div class="ba-frame-body">
+<div class="contact-card panel"><div class="wf-placeholder avatar">Photo</div><div><p><strong>[Name]</strong>, [Role], Membership Services</p><p class="contact-lines"><span>membership@abpi.org.uk</span><span>0207 747 1414</span></p><p class="contact-lines"><a href="../pages/join-enquiry.html">Send an enquiry</a></p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

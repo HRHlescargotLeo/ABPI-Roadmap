@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give events their own address — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="events">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 23 of 34 · Events</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Move events from /membership2/events/ to /events/, with redirects from the old addresses.</p></div>
+          <div><h2>Why</h2><p>Events live at /membership2/events/ and the page title reads "Events | Membership", although many of the events are open to everyone. A top-level /events/ section with redirects is a small piece of configuration, and it makes event links read properly when they are shared.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW23: Give events their own address (R-QW23, idea #35) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW23 · Events</p>
+        <h1>Give events their own address</h1>
+        <p class="lead">Move events from /membership2/events/ to /events/, with redirects from the old addresses.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Events filed under a second membership section.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership2/events/</span></div>
+            <div class="ba-frame-body">
+<div class="addr-bar"><span>https://www.abpi.org.uk/membership2/events/2026/october/nicedtsuabpi-masterclass-evidence-synthesis-for-nice-submissions/</span></div><p class="mock-meta">Page title: Events | Membership</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>A top-level events section, with the old addresses redirected.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership2/events/</span></div>
+            <div class="ba-frame-body">
+<div class="addr-bar"><span>https://www.abpi.org.uk/events/2026/nice-dtsu-abpi-masterclass-evidence-synthesis/</span></div><p class="mock-meta">Page title: NICE/DTSU/ABPI Masterclass | Events | ABPI</p><table class="url-table"><thead><tr><th scope="col">Old address</th><th scope="col">Redirects to</th></tr></thead><tbody><tr><td>/membership2/events/</td><td>/events/</td></tr><tr><td>/membership2/events/2026/october/nicedtsuabpi-…</td><td>/events/2026/nice-dtsu-abpi-…</td></tr></tbody></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

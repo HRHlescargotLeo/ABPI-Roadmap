@@ -31,7 +31,8 @@
     'stay-informed.html': u('ubtnpoha/woman-smiling-meeting-871x581-webp60.webp'),
     'media.html': u('w2fdbqus/richard_lectern.jpg?width=1400'),
     'events.html': u('cxoapkkf/_dsc0264.jpg?width=1400'),
-    'library.html': u('wauejrdp/scientist-microscope-930x930-webp60.webp')
+    'library.html': u('wauejrdp/scientist-microscope-930x930-webp60.webp'),
+    'quick-wins/index.html': u('jcgofh1n/women-scientist-microscope-871x581-webp75.webp')
   };
 
   /* Placeholders matched on their label text. */
@@ -74,7 +75,10 @@
   }
 
   function label(el) { return (el.textContent || '').trim().toLowerCase(); }
-  function file() { return window.location.pathname.split('/').pop() || 'index.html'; }
+  function file() {
+    var f = window.location.pathname.split('/').pop() || 'index.html';
+    return /\/quick-wins\//.test(window.location.pathname) ? 'quick-wins/' + f : f;
+  }
 
   function applyHero() {
     var head = document.querySelector('.page-head, .hub-hero');

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show whether an event has places — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="events">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 20 of 34 · Events</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A status label on every event (booking open, few places, full, register interest), driven by one field.</p></div>
+          <div><h2>Why</h2><p>ABPI Code training is listed as "now available to book" while both remaining dates are marked FULL further down its own page, and the Code page lists it under a third date. A single status field, shown on the listing, the event page and the homepage, means they can't disagree.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW20: Show whether an event has places (R-QW20, idea #32) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW20 · Events</p>
+        <h1>Show whether an event has places</h1>
+        <p class="lead">A status label on every event (booking open, few places, full, register interest), driven by one field.</p>
+        <p class="qw-where">Also part of prototype 5, Stay informed.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Listed as available to book; full when you read on.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership2/events/</span></div>
+            <div class="ba-frame-body">
+<article class="mock-event"><p class="mock-meta">11 May 2026 - 06 November 2026 · 09:30 - 16:00</p><h4>ABPI Code training</h4><p>ABPI Code training delivered by members of the PMCPA Code of Practice Panel is now available to book</p></article><p class="mock-meta">On the event page: "Available dates for 2026 are below: 5 November 2026 - FULL 6 November 2026 - FULL"</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>One status, shown everywhere, with a waiting list.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership2/events/</span></div>
+            <div class="ba-frame-body">
+<article class="event-card"><div class="event-date" aria-hidden="true"><b>5</b>Nov<br>2026</div><div class="event-body"><p class="event-tags"><span class="badge">Full: waiting list</span><span class="tag">In person</span><span class="tag">Open to all</span></p><h3>ABPI Code training</h3><p class="event-when">5–6 November 2026 · 09:30–16:00 · London Bridge</p><p class="event-desc">A one-day seminar delivered by members of the PMCPA Code of Practice Panel. Both 2026 dates are full.</p></div><div class="event-actions"><a class="btn" href="../pages/events.html">Join waiting list</a></div></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

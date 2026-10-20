@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restore the news archive — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="news">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 16 of 34 · News, media and email</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Retag older news so it can be found from the Media Centre, not only by search.</p></div>
+          <div><h2>Why</h2><p>The year filter in the Media Centre shows 2026 (30), 2025 (63), 2024 (68) and 2023 (1). Older stories still exist, a December 2023 news page among them, but they can't be reached from the listing. It looks like tags were lost in a migration. Retagging them puts the ABPI's record back where people can see it.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW16: Restore the news archive (R-QW16, idea #28) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW16 · News, media and email</p>
+        <h1>Restore the news archive</h1>
+        <p class="lead">Retag older news so it can be found from the Media Centre, not only by search.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>The year filter today.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/media/</span></div>
+            <div class="ba-frame-body">
+<h3 class="filter-h">Year</h3><ul class="theme-list"><li>All (163)</li><li>2026 (30)</li><li>2025 (63)</li><li>2024 (68)</li><li>2023 (1)</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Every year with its stories, once retagged. Counts are placeholders.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/media/</span></div>
+            <div class="ba-frame-body">
+<h3 class="filter-h">Year</h3><ul class="theme-list"><li>All ([n])</li><li>2026 (30)</li><li>2025 (63)</li><li>2024 (68)</li><li>2023 ([n])</li><li>2022 ([n])</li><li>2021 ([n])</li><li>2020 ([n])</li><li>Earlier ([n])</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

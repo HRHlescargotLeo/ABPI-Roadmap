@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A source and date under every statistic — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="data">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 10 of 34 · Facts and figures</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Show where each figure comes from wherever it appears, starting with the homepage.</p></div>
+          <div><h2>Why</h2><p>The homepage shows three headline statistics with reference numbers [1], [2] and [3], but the references themselves are on a different page. A source line under each figure, drawn from the same record as the Facts page, means anyone quoting the figure from the homepage can cite it properly.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW10: A source and date under every statistic (R-QW10, idea #15) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW10 · Facts and figures</p>
+        <h1>A source and date under every statistic</h1>
+        <p class="lead">Show where each figure comes from wherever it appears, starting with the homepage.</p>
+        <p class="qw-where">Also part of prototype 3, Industry in numbers.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Reference numbers that point to a list on another page.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<h3>Economic statistics</h3><div class="stat-grid three"><div><b>£20.39bn</b><span>direct Gross Value Added (GVA) [1]</span></div><div><b>£9.3bn</b><span>investment in UK R&amp;D in 2024 [2]</span></div><div><b>£1 in every £6</b><span>invested by the private sector in R&amp;D is invested by the pharmaceutical industry [3]</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>A short source and date under each figure.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<h3>Economic statistics</h3><div class="stat-grid three"><div><b>£20.39bn</b><span>direct Gross Value Added (GVA)</span><small class="src">ONS, Regional GVA by industry, 2025</small></div><div><b>£9.3bn</b><span>investment in UK R&amp;D in 2024</span><small class="src">ONS, Business enterprise R&amp;D, Dec 2025</small></div><div><b>£1 in every £6</b><span>invested by the private sector in R&amp;D is invested by the pharmaceutical industry</span><small class="src">ONS, Business enterprise R&amp;D, Dec 2025</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

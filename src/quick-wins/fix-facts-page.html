@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix the Facts and figures page — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="data">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 8 of 34 · Facts and figures</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Complete the two captions that stop mid-word and restore the missing references.</p></div>
+          <div><h2>Why</h2><p>Two statistic captions on the page stop mid-word ("a significantly lower pro", "in their first year follow"), one has an empty superscript, and figures cite references [9] and [12] when the list ends at [7]. These are the numbers journalists and officials quote. It is a content fix, and it matters more than its size suggests.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW8: Fix the Facts and figures page (R-QW8, idea #13) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW8 · Facts and figures</p>
+        <h1>Fix the Facts and figures page</h1>
+        <p class="lead">Complete the two captions that stop mid-word and restore the missing references.</p>
+        <p class="qw-where">Also part of prototype 3, Industry in numbers.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Captions cut off mid-word; references cited that are not in the list.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/facts-figures-and-industry-data/</span></div>
+            <div class="ba-frame-body">
+<h3>Health system statistics</h3><div class="stat-grid">
+<div><b>£1.2bn</b><span>income to the NHS for industry clinical trials initiated in 2022/23 [9]</span></div>
+<div><b>9%</b><span>amount the UK invests of overall healthcare spending on medicines – a significantly lower pro</span></div>
+<div><b>578</b><span>industry clinical trials initiated in the UK in 2024 (increasing from 426 trials in 2023, but below 2017 (667 trials) [12]</span></div>
+<div><b>52%</b><span>average uptake of medicines launched between 2018 and 2022, in their first year follow</span></div></div>
+<p class="refs"><strong>References:</strong> [1] ONS… [2] ONS… [3] ONS… [4] ONS… [5] ONS… [6] Frontier Economics… [7] ABPI, 'UK industry clinical trials: Translating actions into impact', Dec 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Complete captions and a complete reference list. Wording in brackets is for the ABPI to confirm.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/facts-figures-and-industry-data/</span></div>
+            <div class="ba-frame-body">
+<h3>Health system statistics</h3><div class="stat-grid">
+<div><b>£1.2bn</b><span>income to the NHS for industry clinical trials initiated in 2022/23 [9]</span></div>
+<div><b>9%</b><span>of overall healthcare spending the UK invests in medicines – a significantly lower [proportion than comparable countries] [10]</span></div>
+<div><b>578</b><span>industry clinical trials initiated in the UK in 2024, up from 426 in 2023 but below the 667 of 2017 [12]</span></div>
+<div><b>52%</b><span>average uptake of medicines launched between 2018 and 2022 in their first year [following NICE recommendation] [13]</span></div></div>
+<p class="refs"><strong>References:</strong> [1]–[7] as now. [8] [Source]. [9] Frontier Economics, 'The value of industry clinical trials to the UK', Dec 2024. [10] [Source]. [11] [Source]. [12] ABPI, 'UK industry clinical trials', Dec 2025. [13] [Source].</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

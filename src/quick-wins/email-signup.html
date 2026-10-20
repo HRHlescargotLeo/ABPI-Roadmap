@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An email sign-up in the footer — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="news">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 14 of 34 · News, media and email</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A short sign-up (email and one tick box) in the footer of every page, linking to a fuller preference page.</p></div>
+          <div><h2>Why</h2><p>We couldn't find a newsletter or email alert sign-up anywhere on the site. The ABPI publishes something most weeks, and the people who would most like to hear about it have to remember to come and look. A footer sign-up connected to the email platform the ABPI already uses is the smallest version of this. Try submitting it.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW14: An email sign-up in the footer (R-QW14, idea #25) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW14 · News, media and email</p>
+        <h1>An email sign-up in the footer</h1>
+        <p class="lead">A short sign-up (email and one tick box) in the footer of every page, linking to a fuller preference page.</p>
+        <p class="qw-where">Also part of prototype 5, Stay informed.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>The footer: useful links, website info, no way to sign up.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="mock-footer"><div><h4>Useful links</h4><ul><li>Contact us</li><li>Careers</li><li>ABPI Exam</li><li>ABPI Schools</li></ul></div><div><h4>Website info</h4><ul><li>Terms &amp; conditions</li><li>Accessibility</li><li>Cookie policy</li><li>Privacy policy</li></ul></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>A sign-up in the footer, with validation. Nothing is sent.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="mock-footer"><div><h4>Useful links</h4><ul><li>Contact us</li><li>Careers</li><li>ABPI Exam</li><li>ABPI Schools</li></ul></div><div><h4>Website info</h4><ul><li>Terms &amp; conditions</li><li>Accessibility</li><li>Cookie policy</li><li>Privacy policy</li></ul></div>
+<div class="footer-signup"><h4>Get our updates</h4><form data-qw-form="su-done" novalidate><div class="field" data-msg="Enter your email address."><label for="su-email">Email address</label><input type="email" id="su-email" required autocomplete="email"></div><div class="field" data-msg="Please agree so we can email you."><label class="check"><input type="checkbox" id="su-ok" required> Send me the ABPI's weekly round-up. I can unsubscribe at any time.</label></div><button type="submit" class="btn">Sign up</button> <a href="../pages/stay-informed.html">Choose topics</a></form><p id="su-done" class="confirm-inline" hidden>Thanks. Check your inbox to confirm.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

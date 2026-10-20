@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name the typeface correctly in the stylesheet — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="look">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 33 of 34 · Look, feel and accessibility</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Rename the &quot;Gilroy&quot; font families to Poppins, which is what the site actually loads.</p></div>
+          <div><h2>Why</h2><p>The stylesheet registers families called GilroyRegular, GilroyBold and so on, but every one of them loads a Poppins file. It looks as if Gilroy was swapped out at some point and the names were left behind. Nobody visiting the site sees the difference, but the next developer or designer to work on it will be misled, so it is worth a small fix and a question about whether Gilroy is still the brand face in print.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW33: Name the typeface correctly in the stylesheet (R-QW33, idea #51) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW33 · Look, feel and accessibility</p>
+        <h1>Name the typeface correctly in the stylesheet</h1>
+        <p class="lead">Rename the &quot;Gilroy&quot; font families to Poppins, which is what the site actually loads.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Families named Gilroy that load Poppins.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/assets/styles/styles.min.css</span></div>
+            <div class="ba-frame-body">
+<pre class="code-snip">@font-face {
+  font-family: GilroyBold;
+  src: url("../../assets/fonts/Poppins/Poppins-Bold.ttf");
+}
+h1 { font-family: GilroyBold; }</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Families named for the font they load.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/assets/styles/styles.min.css</span></div>
+            <div class="ba-frame-body">
+<pre class="code-snip">@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("../../assets/fonts/Poppins/Poppins-Bold.woff2") format("woff2");
+}
+h1 { font-family: "Poppins", sans-serif; font-weight: 700; }</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

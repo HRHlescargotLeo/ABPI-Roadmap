@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary definitions in place — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="news">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 18 of 34 · News, media and email</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Show a glossary definition in a small popover, rather than taking the reader to the glossary page.</p></div>
+          <div><h2>Why</h2><p>The glossary is one of the site's real strengths, and body copy already links terms to it. Clicking a term, though, takes the reader away from what they were reading. Showing the definition where it is, with a link to the full entry, keeps the benefit without the detour. Click the term to try it.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW18: Glossary definitions in place (R-QW18, idea #30) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW18 · News, media and email</p>
+        <h1>Glossary definitions in place</h1>
+        <p class="lead">Show a glossary definition in a small popover, rather than taking the reader to the glossary page.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>The term links away to the glossary page.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/about-the-abpi/</span></div>
+            <div class="ba-frame-body">
+<p>The ABPI Code of Practice is administered by the <a href="#">PMCPA</a>, which operates independently of the ABPI.</p><p class="wf-meta">Clicking the link opens abpi.org.uk/glossary/#prescription-medicine-code-of-practice-authority.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>The definition opens in place. Click &quot;PMCPA&quot;.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/about-the-abpi/</span></div>
+            <div class="ba-frame-body">
+<p>The ABPI Code of Practice is administered by the <button type="button" class="gloss-term" data-pop="pop-pmcpa" aria-expanded="false">PMCPA</button>, which operates independently of the ABPI.</p>
+<div class="gloss-pop" id="pop-pmcpa" role="dialog" aria-label="Glossary: PMCPA" hidden><p class="eyebrow">Glossary</p><h4>Prescription Medicines Code of Practice Authority (PMCPA)</h4><p>[Definition from the ABPI glossary.]</p><a href="#">Full glossary entry</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

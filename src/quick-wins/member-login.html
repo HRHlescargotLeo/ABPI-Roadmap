@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A visible way in for members — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="members">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 7 of 34 · Members</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A &quot;Member area&quot; link in the header of every page, opening a sign-in for the extranet.</p></div>
+          <div><h2>Why</h2><p>Members are told they get "access to our extranet" when they join, but there is no login link anywhere on the site, in the header or the footer. Members presumably bookmark it or search for it. A link in the header is the smallest possible change and it signals to everyone else that there is something behind the door.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW7: A visible way in for members (R-QW7, idea #9) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW7 · Members</p>
+        <h1>A visible way in for members</h1>
+        <p class="lead">A &quot;Member area&quot; link in the header of every page, opening a sign-in for the extranet.</p>
+        <p class="qw-where">Also part of prototype 2, Members.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>No sign-in or member area link in the header.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="mock-nav"><span class="mock-logo">abpi</span><span>About the ABPI</span><span>Our focus</span><span>Membership</span><span>Our industry</span><span>News</span><span>Publications</span><span class="mock-search">Search</span><span class="mock-outline">Resources for schools</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>&quot;Member area&quot; sits in the header on every page. Open it.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="mock-utility"><a href="#">Contact us</a><div class="mock-menu"><button type="button" class="mock-menu-trigger" aria-expanded="false">Member area ▾</button><div class="mock-menu-panel right"><p><strong>Members</strong></p><p class="wf-meta">Briefings, groups and member events.</p><a class="btn btn-sm" href="../pages/member-area.html">Sign in</a></div></div></div>
+<div class="mock-nav"><span class="mock-logo">abpi</span><span>About the ABPI</span><span>Our focus</span><span>Membership</span><span>Our industry</span><span>News</span><span>Publications</span><span class="mock-search">Search</span><span class="mock-outline">Resources for schools</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

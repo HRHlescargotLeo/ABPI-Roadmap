@@ -10,6 +10,8 @@ client requirements; the ABPI has not yet reviewed them.
 - R03 All interactive components are keyboard operable and dismissible with Escape (WCAG 2.2 AA target) (#42, #54).
 - R04 Buttons use one primary and one secondary style, sentence case (#50).
 - R05 Every statistic shown carries its source and date (#15).
+- R06 The model has two tabs, Big improvements and Quick wins, each with its own overview; the pager stays within the current tab.
+- R07 Each quick win stands alone, with a Today / Proposed switch against the live site as seen on 30 Sep 2026. No estimates, prices or effort labels anywhere in the model.
 
 ## Prototype 1 — Join the ABPI (ideas #1–#7)
 - R10 A membership overview with three categories side by side and one clear call to action (#7).
@@ -52,3 +54,40 @@ client requirements; the ABPI has not yet reviewed them.
 - R53 Event listings with status (booking open, few places, full, waiting list), format, audience and price (#32, #33).
 - R54 Event descriptions clamped; details and booking in a panel with add-to-calendar (#33, #34).
 - R55 Events live at /events/, not under membership (#35).
+
+## Quick wins (QW1–QW34, phase 3)
+Each quick win is a standalone demo with a Today / Proposed switch (R07). Idea numbers refer to the Opportunities page.
+- QW1 "Which membership fits us?" checker (#2) — quick-wins/membership-checker.html
+- QW2 Explain how membership fees are worked out (#3) — quick-wins/fees-explained.html
+- QW3 A membership benefits section with proof (#4) — quick-wins/benefits-proof.html
+- QW4 A named membership contact (#5) — quick-wins/membership-contact.html
+- QW5 A route for smaller and emerging companies (#6) — quick-wins/smaller-companies.html
+- QW6 One clear "join" link in the Membership menu (#7) — quick-wins/membership-menu.html
+- QW7 A visible way in for members (#9) — quick-wins/member-login.html
+- QW8 Fix the Facts and figures page (#13) — quick-wins/fix-facts-page.html
+- QW9 One figure for jobs (#14) — quick-wins/jobs-figure.html
+- QW10 A source and date under every statistic (#15) — quick-wins/stat-sources.html
+- QW11 Twelve publication themes instead of around 38 (#20) — quick-wins/publication-themes.html
+- QW12 A proper summary and date on every publication (#21) — quick-wins/result-summaries.html
+- QW13 A home for consultation responses (#23) — quick-wins/consultation-responses.html
+- QW14 An email sign-up in the footer (#25) — quick-wins/email-signup.html
+- QW15 Share previews that show a title and image (#27) — quick-wins/share-previews.html
+- QW16 Restore the news archive (#28) — quick-wins/news-archive.html
+- QW17 Author pages and clickable tags (#29) — quick-wins/author-pages.html
+- QW18 Glossary definitions in place (#30) — quick-wins/glossary-popovers.html
+- QW19 An explainer format (#31) — quick-wins/explainer-format.html
+- QW20 Show whether an event has places (#32) — quick-wins/event-status.html
+- QW21 Event cards that fit (#33) — quick-wins/event-cards.html
+- QW22 A clear booking panel with add to calendar (#34) — quick-wins/booking-panel.html
+- QW23 Give events their own address (#35) — quick-wins/events-address.html
+- QW24 Bring the Code of Practice page up to date (#37) — quick-wins/code-page.html
+- QW25 Use the review dates to catch stale pages (#41) — quick-wins/review-dates.html
+- QW26 Strip pasted formatting from page content (#43) — quick-wins/pasted-formatting.html
+- QW27 A better "page not found" (#44) — quick-wins/page-not-found.html
+- QW28 Tidy page addresses (#45) — quick-wins/tidy-urls.html
+- QW29 Check for duplicate copies of the site in search results (#46) — quick-wins/duplicate-hosts.html
+- QW30 Review the third-party tools on each page (#47) — quick-wins/third-party-tools.html
+- QW31 A Welsh summary for ABPI Cymru Wales (#48) — quick-wins/welsh-summary.html
+- QW32 One style for buttons (#50) — quick-wins/button-style.html
+- QW33 Name the typeface correctly in the stylesheet (#51) — quick-wins/font-names.html
+- QW34 Headings in the right order (#54) — quick-wins/heading-order.html

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One style for buttons — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="look">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 32 of 34 · Look, feel and accessibility</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>One primary and one secondary button style, in sentence case, in place of three styles and two magentas.</p></div>
+          <div><h2>Why</h2><p>The homepage alone has at least three button styles: two uppercase versions at different sizes and weights, and a sentence-case one, using two very slightly different magentas. Settling on one primary and one secondary style is a stylesheet change, and it makes every call to action look like it belongs to the same site.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW32: One style for buttons (R-QW32, idea #50) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW32 · Look, feel and accessibility</p>
+        <h1>One style for buttons</h1>
+        <p class="lead">One primary and one secondary button style, in sentence case, in place of three styles and two magentas.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Three button styles on the homepage.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="row"><span class="today-btn caps-a">SEE ALL OUR EVENTS</span><span class="today-btn caps-b">ALL PUBLICATIONS</span><span class="today-btn plain">View more facts, figures and industry data</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>One primary and one secondary style, sentence case.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="row"><a class="btn" href="#">See all events</a><a class="btn" href="#">All publications</a><a class="btn btn-secondary" href="#">Facts, figures and industry data</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

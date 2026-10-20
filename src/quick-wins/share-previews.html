@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share previews that show a title and image — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="news">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 15 of 34 · News, media and email</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Fill in the title, description and image that social sites and messaging apps use when a page is shared.</p></div>
+          <div><h2>Why</h2><p>The Media Centre's share tags (og:title, og:description, og:image) are empty, and the homepage has no share image, so a link posted on LinkedIn or sent in Teams shows up as a bare address. Defaults for each page type, with overrides for reports and news, fix it everywhere at once.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW15: Share previews that show a title and image (R-QW15, idea #27) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW15 · News, media and email</p>
+        <h1>Share previews that show a title and image</h1>
+        <p class="lead">Fill in the title, description and image that social sites and messaging apps use when a page is shared.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>How a link to the Media Centre appears when shared today.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/media/</span></div>
+            <div class="ba-frame-body">
+<div class="share-card bare"><div class="share-body"><span class="share-host">abpi.org.uk</span><b>https://www.abpi.org.uk/media/</b></div></div>
+<pre class="code-snip">&lt;meta property="og:title" content=""&gt;
+&lt;meta property="og:description" content=""&gt;
+&lt;meta property="og:image" content=""&gt;</pre>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>The same link with a title, description and image.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/media/</span></div>
+            <div class="ba-frame-body">
+<div class="share-card"><div class="wf-placeholder ratio-16-9">Share image</div><div class="share-body"><span class="share-host">abpi.org.uk</span><b>Media Centre | ABPI</b><span>News, statements and comment from the Association of the British Pharmaceutical Industry.</span></div></div>
+<pre class="code-snip">&lt;meta property="og:title" content="Media Centre | ABPI"&gt;
+&lt;meta property="og:description" content="News, statements and comment from the ABPI."&gt;
+&lt;meta property="og:image" content="…/abpi-share-default.jpg"&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

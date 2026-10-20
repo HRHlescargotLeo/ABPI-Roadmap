@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author pages and clickable tags — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="news">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 17 of 34 · News, media and email</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Link each blog author to a page with their role and posts, and make tags open a filtered list.</p></div>
+          <div><h2>Why</h2><p>Blogs show the author as plain text ("by Alan Lamb") and the tags under each post aren't links. The ABPI's specialists are part of its authority. An author page, and tags that lead somewhere, give readers a reason to read the next post.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW17: Author pages and clickable tags (R-QW17, idea #29) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW17 · News, media and email</p>
+        <h1>Author pages and clickable tags</h1>
+        <p class="lead">Link each blog author to a page with their role and posts, and make tags open a filtered list.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Author and tags as plain text.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/media/blogs/</span></div>
+            <div class="ba-frame-body">
+<p class="mock-meta">28 August 2026 · Posted in Blog · by Alan Lamb</p><h3>NICE has updated how it values quality of life - the move from 3L to 5L</h3><p>This week, NICE confirmed it is adopting the UK EQ-5D-5L value set…</p><p class="mock-meta">TAGS<br>NICE · NICE Methods Review · Evaluation · Health and Access to Medicines</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>The author links to a profile; tags link to filtered lists.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/media/blogs/</span></div>
+            <div class="ba-frame-body">
+<p class="mock-meta">28 August 2026 · Blog · by <a href="#">Alan Lamb</a></p><h3>NICE has updated how it values quality of life - the move from 3L to 5L</h3><p>This week, NICE confirmed it is adopting the UK EQ-5D-5L value set…</p><p class="chips-row"><a class="chip" href="#">NICE</a><a class="chip" href="#">NICE Methods Review</a><a class="chip" href="#">Evaluation</a><a class="chip" href="#">Health and Access to Medicines</a></p>
+<div class="person author-card"><div class="wf-placeholder avatar">Photo</div><div><b>Alan Lamb</b><p>[Role at the ABPI]</p><p><a href="#">More from Alan</a></p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

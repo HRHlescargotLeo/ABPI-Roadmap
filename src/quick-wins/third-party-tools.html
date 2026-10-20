@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review the third-party tools on each page — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="care">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 30 of 34 · Accuracy and housekeeping</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>List what each external script is for, and remove the ones nobody uses.</p></div>
+          <div><h2>Why</h2><p>The homepage calls twelve third-party addresses, including two site-quality tools that seem to do similar jobs (Siteimprove and Silktide), Ahrefs, Google Analytics, a sharing widget, a feedback widget and the search service. Some of these will be essential. Fewer scripts mean faster pages and a simpler cookie banner, and the review itself is a short job.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW30: Review the third-party tools on each page (R-QW30, idea #47) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW30 · Accuracy and housekeeping</p>
+        <h1>Review the third-party tools on each page</h1>
+        <p class="lead">List what each external script is for, and remove the ones nobody uses.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>External services called by the homepage.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<ul class="mock-list host-list"><li>www.googletagmanager.com</li><li>region1.google-analytics.com</li><li>siteimproveanalytics.com</li><li>6136333.global.siteimproveanalytics.io</li><li>analytics.silktide.com</li><li>analytics.ahrefs.com</li><li>cdn-ukwest.onetrust.com</li><li>geolocation.onetrust.com</li><li>customer.cludo.com</li><li>cdn.reactandshare.com</li><li>data.reactandshare.com</li><li>askem.com</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>A review table for the ABPI to complete. Decisions in brackets are examples.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="table-wrap"><table class="url-table"><thead><tr><th scope="col">Tool</th><th scope="col">What it does</th><th scope="col">Decision</th></tr></thead><tbody><tr><td>Google Analytics / Tag Manager</td><td>Visitor statistics</td><td>[Keep]</td></tr><tr><td>OneTrust</td><td>Cookie consent</td><td>[Keep]</td></tr><tr><td>Cludo</td><td>Site search</td><td>[Keep]</td></tr><tr><td>Siteimprove</td><td>Site quality checks</td><td>[Keep one of these two]</td></tr><tr><td>Silktide</td><td>Site quality checks</td><td>[Keep one of these two]</td></tr><tr><td>Ahrefs</td><td>Search ranking analytics</td><td>[Check if used]</td></tr><tr><td>React &amp; Share</td><td>Sharing widget</td><td>[Check if used]</td></tr><tr><td>askem</td><td>"Did you find what you were looking for?"</td><td>[Keep]</td></tr></tbody></table></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

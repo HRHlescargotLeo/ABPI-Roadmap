@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One figure for jobs — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="data">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 9 of 34 · Facts and figures</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Use the same jobs figure on the Facts page and the Careers page, or say why they differ.</p></div>
+          <div><h2>Why</h2><p>The Facts and figures page says the industry supports 125,702 jobs. The Careers page says it "directly employs over 73,000 people". They may well be two different measures, but nothing on either page says so, and anyone comparing them will assume one is wrong.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW9: One figure for jobs (R-QW9, idea #14) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW9 · Facts and figures</p>
+        <h1>One figure for jobs</h1>
+        <p class="lead">Use the same jobs figure on the Facts page and the Careers page, or say why they differ.</p>
+        <p class="qw-where">Also part of prototype 3, Industry in numbers.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Two different jobs figures on two pages, with no explanation.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/careers/</span></div>
+            <div class="ba-frame-body">
+<div class="two-col"><div class="panel"><p class="wf-meta">Facts, figures and industry data</p><p class="big-fig">125,702</p><p>jobs [4]</p></div><div class="panel"><p class="wf-meta">Careers in the pharmaceutical industry</p><p>This is a knowledge driven industry, requiring a highly skilled workforce and directly employs over 73,000 people, with over 23,000 of these in research and development.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>The same figure on both, with the measure stated. Wording for the ABPI to confirm.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/careers/</span></div>
+            <div class="ba-frame-body">
+<div class="two-col"><div class="panel"><p class="wf-meta">Facts, figures and industry data</p><p class="big-fig">125,702</p><p>jobs in the UK pharmaceutical industry [measure, e.g. including manufacturing and wholesale]</p><p class="wf-meta">Source: ONS, Business Register and Employment Survey, October 2025</p></div><div class="panel"><p class="wf-meta">Careers in the pharmaceutical industry</p><p>The industry supports 125,702 jobs in the UK [measure], [x] of them in research and development.</p><p class="wf-meta">Source: ONS, Business Register and Employment Survey, October 2025</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Use the review dates to catch stale pages — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="care">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 25 of 34 · Accuracy and housekeeping</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>A report in the CMS listing pages by review date and owner, with shorter cycles for time-sensitive pages.</p></div>
+          <div><h2>Why</h2><p>Every content page already carries a "Last reviewed" and "Next review" date, which is more than most sites manage. Stale copy still gets through: the Code page was last reviewed in September 2024 and isn't due again until 2027. A simple report of what is due, by owner, with six-month cycles for pages that carry dates or deadlines, turns the dates into a working process.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW25: Use the review dates to catch stale pages (R-QW25, idea #41) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW25 · Accuracy and housekeeping</p>
+        <h1>Use the review dates to catch stale pages</h1>
+        <p class="lead">A report in the CMS listing pages by review date and owner, with shorter cycles for time-sensitive pages.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Review dates sit in each page&#x27;s footer, with nothing that brings them together.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk (Umbraco back office)</span></div>
+            <div class="ba-frame-body">
+<p class="mock-meta">Last reviewed date: 20 September 2024 · Next review date: 20 September 2027</p><p class="wf-meta">The same two lines appear at the foot of each content page. There is no view across pages.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>A report of pages by review date and owner. Owners and some dates are examples.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk (Umbraco back office)</span></div>
+            <div class="ba-frame-body">
+<div class="table-wrap"><table class="url-table review-table"><thead><tr><th scope="col">Page</th><th scope="col">Owner</th><th scope="col">Cycle</th><th scope="col">Last reviewed</th><th scope="col">Status</th></tr></thead><tbody>
+<tr><td>ABPI 2024 Code of Practice</td><td>[Code team]</td><td>6 months</td><td>20 Sep 2024</td><td><span class="badge solid">Overdue</span></td></tr>
+<tr><td>Facts, figures and industry data</td><td>[Economics]</td><td>6 months</td><td>[date]</td><td><span class="badge solid">Overdue</span></td></tr>
+<tr><td>Membership FAQs</td><td>[Membership]</td><td>12 months</td><td>[date]</td><td><span class="badge">Due in 30 days</span></td></tr>
+<tr><td>ABPI Manifesto for Investment, Health and Growth</td><td>[Policy]</td><td>12 months</td><td>[date]</td><td><span class="badge">Archive?</span></td></tr></tbody></table></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check for duplicate copies of the site in search results — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="care">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 29 of 34 · Accuracy and housekeeping</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Confirm what the admin., careers. and cancercomparator. addresses serve, and keep only www.abpi.org.uk in search engines.</p></div>
+          <div><h2>Why</h2><p>Web searches return copies of the membership page on admin.abpi.org.uk, careers.abpi.org.uk and cancercomparator.abpi.org.uk as well as the main site. We couldn't open those addresses to confirm what they serve, so the first step is a check. If they are copies, redirecting them or hiding them from search engines stops them competing with the real pages.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW29: Check for duplicate copies of the site in search results (R-QW29, idea #46) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW29 · Accuracy and housekeeping</p>
+        <h1>Check for duplicate copies of the site in search results</h1>
+        <p class="lead">Confirm what the admin., careers. and cancercomparator. addresses serve, and keep only www.abpi.org.uk in search engines.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Search results as we saw them: the same page on four addresses.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>Search engine results</span></div>
+            <div class="ba-frame-body">
+<div class="serp"><p><b>Membership | ABPI</b><br><span>www.abpi.org.uk › membership</span></p><p><b>Membership | ABPI</b><br><span>admin.abpi.org.uk › membership</span></p><p><b>Membership | ABPI</b><br><span>careers.abpi.org.uk › membership</span></p><p><b>Membership | ABPI</b><br><span>cancercomparator.abpi.org.uk › membership</span></p></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>One result, on the main site. The other addresses redirect or are hidden from search.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>Search engine results</span></div>
+            <div class="ba-frame-body">
+<div class="serp"><p><b>Membership | ABPI</b><br><span>www.abpi.org.uk › membership</span><br>We represent our members, using their insight and experience to tell the story of how they change the lives of millions of people every day.</p></div><table class="url-table"><thead><tr><th scope="col">Address</th><th scope="col">Action</th></tr></thead><tbody><tr><td>admin.abpi.org.uk</td><td>[Restrict to staff, or block from search engines]</td></tr><tr><td>careers.abpi.org.uk</td><td>[Redirect to www.abpi.org.uk/careers/]</td></tr><tr><td>cancercomparator.abpi.org.uk</td><td>[Check what it serves]</td></tr></tbody></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>

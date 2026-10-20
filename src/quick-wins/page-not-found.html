@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A better &quot;page not found&quot; — ABPI quick wins</title>
+  <link rel="stylesheet" href="~/css/base.css">
+  <link rel="stylesheet" href="~/css/components.css">
+  <link rel="stylesheet" href="~/css/theme.css">
+</head>
+<body data-qw-theme="care">
+  <!-- @@include header.html -->
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 27 of 34 · Accuracy and housekeeping</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Correct the copy, add a search box and popular links, and check broken links each month.</p></div>
+          <div><h2>Why</h2><p>The page-not-found page reads "Here are some recommended pages that may interested you", then lists the latest news. Its feedback widget has 372 responses, about twice the homepage's 187, which suggests a lot of people end up there. A search box and the pages people most often look for would help them, and a monthly broken-link report would mean fewer arrive.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW27: A better &quot;page not found&quot; (R-QW27, idea #44) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW27 · Accuracy and housekeeping</p>
+        <h1>A better &quot;page not found&quot;</h1>
+        <p class="lead">Correct the copy, add a search box and popular links, and check broken links each month.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>A typo, then the latest news.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/a-page-that-has-moved/</span></div>
+            <div class="ba-frame-body">
+<h3>Page could not be found</h3><p>Here are some recommended pages that may interested you</p><ul class="mock-list"><li>28 August 2026 BLOG · NICE has updated how it values quality of life…</li><li>08 September 2026 NEWS · Green shoots for UK pharma investment…</li><li>20 July 2026 NEWS · ABPI comment on resignation of Lord Vallance</li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Plain copy, a search box and the pages people most often look for.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/a-page-that-has-moved/</span></div>
+            <div class="ba-frame-body">
+<h3>We can't find that page</h3><p>It may have moved, or the link may be out of date. Try searching, or start from one of these.</p><form class="search-row" role="search" onsubmit="return false"><label class="visually-hidden" for="nf-q">Search the site</label><input type="search" id="nf-q" placeholder="Search abpi.org.uk"><button type="submit" class="btn">Search</button></form>
+<ul class="link-grid"><li><a href="../pages/publications.html">Publications</a></li><li><a href="../pages/data.html">Facts and figures</a></li><li><a href="#">ABPI Code of Practice</a></li><li><a href="../pages/members.html">Our members</a></li><li><a href="../pages/events.html">Events</a></li><li><a href="#">Contact us</a></li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- @@include footer.html -->
+  <script src="~/js/data.js"></script>
+  <script src="~/js/quick-wins.js"></script>
+  <script src="~/js/wireframe.js"></script>
+  <script src="~/js/photos.js"></script>
+</body>
+</html>
