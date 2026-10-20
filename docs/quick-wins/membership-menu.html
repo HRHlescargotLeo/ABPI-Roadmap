@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One clear &quot;join&quot; link in the Membership menu — ABPI quick wins</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body data-qw-theme="join">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces the ABPI's own header, R01).
+       Two tabs: the five big improvements and the quick wins (R06). -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="ABPI prototypes, overview">ABPI <span>prototypes</span></a>
+      <nav class="proto-sections" aria-label="Sections">
+        <a href="../index.html" data-section-link="major">Big improvements</a>
+        <a href="../quick-wins/index.html" data-section-link="quick">Quick wins</a>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+    <div class="proto-subnav">
+      <div class="container">
+        <nav aria-label="Big improvements" data-section="major">
+          <ul class="proto-links">
+            <li><a href="../index.html" data-proto="index">Overview</a></li>
+            <li><a href="../pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
+            <li><a href="../pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
+            <li><a href="../pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
+            <li><a href="../pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
+            <li><a href="../pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Quick wins" data-section="quick" hidden>
+          <ul class="proto-links">
+            <li><a href="../quick-wins/index.html" data-qw-link="index">All quick wins</a></li>
+            <li><a href="../quick-wins/index.html#join" data-qw-link="join">Joining</a></li>
+            <li><a href="../quick-wins/index.html#members" data-qw-link="members">Members</a></li>
+            <li><a href="../quick-wins/index.html#data" data-qw-link="data">Facts and figures</a></li>
+            <li><a href="../quick-wins/index.html#pubs" data-qw-link="pubs">Publications</a></li>
+            <li><a href="../quick-wins/index.html#news" data-qw-link="news">News and email</a></li>
+            <li><a href="../quick-wins/index.html#events" data-qw-link="events">Events</a></li>
+            <li><a href="../quick-wins/index.html#code" data-qw-link="code">The Code</a></li>
+            <li><a href="../quick-wins/index.html#care" data-qw-link="care">Housekeeping</a></li>
+            <li><a href="../quick-wins/index.html#look" data-qw-link="look">Look and feel</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 6 of 34 · Joining the ABPI</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Point &quot;Become an ABPI member&quot; at the joining journey, rather than at the same page as &quot;ABPI Membership&quot;.</p></div>
+          <div><h2>Why</h2><p>In the Membership menu, "ABPI Membership" and "Become an ABPI member" both go to /membership/. The second one looks like the way in, so it should go somewhere different: the checker or the enquiry. It's a change to one menu item.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW6: One clear &quot;join&quot; link in the Membership menu (R-QW6, idea #7) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW6 · Joining the ABPI</p>
+        <h1>One clear &quot;join&quot; link in the Membership menu</h1>
+        <p class="lead">Point &quot;Become an ABPI member&quot; at the joining journey, rather than at the same page as &quot;ABPI Membership&quot;.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>Two menu items that go to the same page.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="mock-nav"><span class="mock-logo">abpi</span><span>About the ABPI</span><span>Our focus</span>
+<div class="mock-menu"><button type="button" class="mock-menu-trigger" aria-expanded="false">Membership ▾</button><div class="mock-menu-panel"><ul><li>ABPI Membership <code>/membership/</code></li><li>Events <code>/membership2/events/</code></li><li>ABPI Members list <code>/membership2/abpi-members-list/</code></li><li>Become an ABPI member <code>/membership/</code></li></ul></div></div>
+<span>Our industry</span><span>News</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>Each item goes somewhere different. Open the menu.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<div class="mock-nav"><span class="mock-logo">abpi</span><span>About the ABPI</span><span>Our focus</span>
+<div class="mock-menu"><button type="button" class="mock-menu-trigger" aria-expanded="false">Membership ▾</button><div class="mock-menu-panel"><ul><li>About membership <code>/membership/</code></li><li>Our members <code>/membership/members/</code></li><li>Member area <code>/members/</code></li><li><strong>Join the ABPI</strong> <code>/membership/join/</code></li></ul></div></div>
+<span>Our industry</span><span>News</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces the ABPI's own footer) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Sample data where marked</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/quick-wins.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/photos.js"></script>
+</body>
+</html>

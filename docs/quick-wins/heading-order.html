@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headings in the right order — ABPI quick wins</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body data-qw-theme="look">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces the ABPI's own header, R01).
+       Two tabs: the five big improvements and the quick wins (R06). -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="ABPI prototypes, overview">ABPI <span>prototypes</span></a>
+      <nav class="proto-sections" aria-label="Sections">
+        <a href="../index.html" data-section-link="major">Big improvements</a>
+        <a href="../quick-wins/index.html" data-section-link="quick">Quick wins</a>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+    <div class="proto-subnav">
+      <div class="container">
+        <nav aria-label="Big improvements" data-section="major">
+          <ul class="proto-links">
+            <li><a href="../index.html" data-proto="index">Overview</a></li>
+            <li><a href="../pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
+            <li><a href="../pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
+            <li><a href="../pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
+            <li><a href="../pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
+            <li><a href="../pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Quick wins" data-section="quick" hidden>
+          <ul class="proto-links">
+            <li><a href="../quick-wins/index.html" data-qw-link="index">All quick wins</a></li>
+            <li><a href="../quick-wins/index.html#join" data-qw-link="join">Joining</a></li>
+            <li><a href="../quick-wins/index.html#members" data-qw-link="members">Members</a></li>
+            <li><a href="../quick-wins/index.html#data" data-qw-link="data">Facts and figures</a></li>
+            <li><a href="../quick-wins/index.html#pubs" data-qw-link="pubs">Publications</a></li>
+            <li><a href="../quick-wins/index.html#news" data-qw-link="news">News and email</a></li>
+            <li><a href="../quick-wins/index.html#events" data-qw-link="events">Events</a></li>
+            <li><a href="../quick-wins/index.html#code" data-qw-link="code">The Code</a></li>
+            <li><a href="../quick-wins/index.html#care" data-qw-link="care">Housekeeping</a></li>
+            <li><a href="../quick-wins/index.html#look" data-qw-link="look">Look and feel</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 34 of 34 · Look, feel and accessibility</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Fix the heading levels on the homepage so screen readers and search engines read the structure correctly.</p></div>
+          <div><h2>Why</h2><p>On the homepage, the main heading is followed by a level-3 strapline before the first level-2 heading, and card titles skip levels. People using screen readers navigate by headings, so the order matters to them. It is a template fix, and a natural part of an accessibility review.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW34: Headings in the right order (R-QW34, idea #54) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW34 · Look, feel and accessibility</p>
+        <h1>Headings in the right order</h1>
+        <p class="lead">Fix the heading levels on the homepage so screen readers and search engines read the structure correctly.</p>
+        
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>The heading outline of the homepage today.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<ol class="outline"><li><code>h1</code> The Association of the British Pharmaceutical Industry</li><li class="l3 bad"><code>h3</code> MEDICINES ARE TRANSFORMING OUR LIVES LIKE NEVER BEFORE.</li><li class="l2"><code>h2</code> Latest news and blogs</li><li class="l3"><code>h3</code> Green shoots for UK pharma investment…</li><li class="l4 bad"><code>h4</code> NICE/DTSU/ABPI Masterclass (event, no h2 or h3 above it)</li><li class="l3 bad"><code>h3</code> Economic statistics (under no h2)</li></ol>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>The same page with headings in order.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk</span></div>
+            <div class="ba-frame-body">
+<ol class="outline"><li><code>h1</code> The Association of the British Pharmaceutical Industry</li><li class="l2"><code>p</code> Medicines are transforming our lives like never before.</li><li class="l2"><code>h2</code> Latest news and blogs</li><li class="l3"><code>h3</code> Green shoots for UK pharma investment…</li><li class="l2"><code>h2</code> Events</li><li class="l3"><code>h3</code> NICE/DTSU/ABPI Masterclass</li><li class="l2"><code>h2</code> Economic statistics</li></ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces the ABPI's own footer) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Sample data where marked</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/quick-wins.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/photos.js"></script>
+</body>
+</html>

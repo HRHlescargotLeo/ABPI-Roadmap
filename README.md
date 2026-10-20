@@ -1,6 +1,6 @@
-# ABPI — website improvement prototypes (V2)
+# ABPI — website improvement prototypes (V3)
 
-Five clickable prototypes for improvements to abpi.org.uk, prepared by ClerksWell following the
+Five clickable prototypes of big improvements to abpi.org.uk, plus 34 quick wins, prepared by ClerksWell following the
 phase 1 review (30 September 2026). The ABPI design layer (aubergine, plum and magenta, Poppins, square
 corners, split heroes, the box motif) lives entirely in `src/css/theme.css`; remove that file and
 `src/js/photos.js` to get the greyscale prototypes back.
@@ -24,14 +24,21 @@ GitHub Pages is set to publish from the `docs/` folder on `main`
 4. Publications — `pages/publications.html` (`?q=` and `?theme=` are kept in the address), plus the topic hub `pages/topic.html`
 5. Stay informed — `pages/stay-informed.html`, plus `pages/media.html` and `pages/events.html`
 
+### Quick wins
+The second tab. `quick-wins/` holds 34 smaller changes (QW1–QW34), each on its own page with a
+"Today / Proposed" switch against the site as seen on 30 September 2026. They are written in
+`tools/quick_wins.py`, which generates the pages, `src/js/quick-wins.js` and the quick-wins section of
+`requirements/requirements.md`; edit that file and run it rather than editing the generated pages.
+No estimates, prices or effort labels appear anywhere in the model.
+
 Module library: `modules/library.html`. Requirements: `requirements/requirements.md` (R-numbers map to idea numbers on the Opportunities page).
 
 ## Build
 ```
-node build-includes.js && node validate.js
+python3 tools/quick_wins.py && node build-includes.js && node validate.js
 ```
 Edit files in `src/`; `docs/` is generated (commit it, as GitHub Pages serves it). The prototype navigator (top bar with the Notes switch) and the previous/next footer live in `src/includes/`.
 Sample data is in `src/js/data.js`: member names, statistics, publication and event titles are real; therapy areas, sites, affiliates, prices, places and anything marked "sample" are not.
 
 ## Status
-V2, designed prototypes for internal review (V1 was greyscale). The ABPI's own header and footer are replaced by a prototype navigator. Notes are off by default; switch "Notes on" in the top bar to show what each prototype proposes and why, plus in-page annotations (yellow for behaviour, red for open questions).
+V3, designed prototypes and quick wins for internal review (V1 greyscale concepts, V2 designed concepts). The ABPI's own header and footer are replaced by a prototype navigator. Notes are off by default; switch "Notes on" in the top bar to show what each prototype proposes and why, plus in-page annotations (yellow for behaviour, red for open questions).

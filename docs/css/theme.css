@@ -487,7 +487,7 @@ aside.panel.surface { border-top-color: var(--abpi-magenta); }
 .proto-pager a:hover .wf-meta { color: #F2C9E6; }
 .proto-pager a .n { border-color: currentColor; border-radius: 0; }
 .proto-footer .wf-meta { color: var(--abpi-charcoal); padding-top: 0.5rem; }
-.proto-footer .wf-meta::after { content: ' · Photography © ABPI'; }
+.proto-footer .container > .wf-meta::after { content: ' · Photography © ABPI'; }
 
 @media (prefers-reduced-motion: reduce) {
   .btn, .cat-card, .hub-tile, .member-card, .accordion-icon, .proto-thumb .wf-placeholder.has-photo { transition: none; }
@@ -511,3 +511,108 @@ aside.panel.surface { border-top-color: var(--abpi-magenta); }
 .search-row input, .search-row .btn { min-height: 50px; }
 .filter-row .field select, .filter-bar .field select { min-height: 50px; }
 .event-actions .btn { white-space: nowrap; }
+
+/* ==========================================================================
+   V3 — two tabs and the quick wins
+   ========================================================================== */
+/* Navigator: tab switch in the top row, the current tab's links below */
+.proto-nav-row { min-height: 72px; }
+.proto-sections a { color: var(--abpi-aubergine); font-weight: 700; border: 1px solid var(--abpi-aubergine); border-radius: 0; padding: 0.6rem 1.1rem; }
+.proto-sections a + a { margin-left: -1px; }
+.proto-sections { gap: 0; }
+.proto-sections a:hover { background: var(--abpi-lilac-mist); color: var(--abpi-aubergine); }
+.proto-sections a[aria-current="page"] { background: var(--abpi-aubergine); color: var(--abpi-white); border-color: var(--abpi-aubergine); }
+.proto-subnav { border-top: 1px solid var(--abpi-rule); background: var(--abpi-white); }
+.proto-subnav .proto-links a { padding-top: 0.85rem; padding-bottom: 0.7rem; font-size: 0.9rem; }
+@media (max-width: 1280px) { .proto-subnav .proto-links a { padding-top: 0.7rem; padding-bottom: 0.6rem; } }
+
+/* Landing page tab cards */
+.tab-card { border: 0; background: var(--abpi-mist); padding: 1.5rem; border-top: 6px solid var(--abpi-rule); transition: background 0.15s; }
+.tab-card:hover { background: var(--abpi-lilac-mist); }
+.tab-card.is-current { border: 0; border-top: 6px solid var(--abpi-magenta); background: var(--abpi-pink-mist); }
+.tab-card-n { color: var(--abpi-magenta); font-size: 2.5rem; }
+.tab-card b { color: var(--abpi-aubergine); font-size: 1.25rem; }
+
+/* Quick wins overview */
+.qw-card { border: 0; background: var(--abpi-mist); padding: 1.5rem; border-top: 6px solid var(--abpi-aubergine); }
+.qw-card .qw-n { color: var(--abpi-magenta); }
+.qw-card h3 { font-size: 1.125rem; }
+.qw-card h3 a { color: var(--abpi-aubergine); text-decoration: none; }
+.qw-card h3 a:hover { color: var(--abpi-magenta); text-decoration: underline; }
+.qw-card .qw-try { color: var(--abpi-charcoal); border-left: 3px solid var(--abpi-magenta); padding-left: 0.65rem; }
+.qw-card .qw-also { color: var(--abpi-plum); font-weight: 600; }
+
+/* Quick win page head and switch */
+.qw-head { background: var(--abpi-aubergine); color: var(--abpi-white); padding: 3rem 0 2.75rem; }
+.qw-head h1 { color: var(--abpi-white); padding-bottom: 1rem; margin-bottom: 1rem; background: linear-gradient(var(--abpi-magenta), var(--abpi-magenta)) left bottom / 64px 3px no-repeat; max-width: 26ch; }
+.qw-head .lead { color: var(--abpi-white); max-width: 62ch; }
+.qw-num { color: #F2C9E6; }
+.qw-head .qw-where { color: var(--abpi-on-dark); }
+.ba-bar { border-bottom: 1px solid var(--abpi-rule); }
+.ba-switch { border: 1px solid var(--abpi-aubergine); }
+.ba-switch button { color: var(--abpi-aubergine); font-family: var(--abpi-font); padding: 0.65rem 1.5rem; }
+.ba-switch button + button { border-left: 1px solid var(--abpi-aubergine); }
+.ba-switch button[aria-pressed="true"] { background: var(--abpi-aubergine); color: var(--abpi-white); }
+.ba-switch [data-ba-show="after"][aria-pressed="true"] { background: var(--abpi-magenta); }
+.ba-caption b { border: 0; background: var(--abpi-aubergine); color: var(--abpi-white); padding: 0.3rem 0.6rem; }
+.ba-after .ba-caption b { background: var(--abpi-magenta); }
+.ba-caption span { color: var(--abpi-charcoal); }
+.ba-frame { border: 1px solid var(--abpi-rule); box-shadow: 0 1px 0 var(--abpi-rule); }
+.ba-frame-bar { background: var(--abpi-mist); border-bottom-color: var(--abpi-rule); }
+.ba-frame-bar i { background: var(--abpi-aubergine); }
+
+/* The rebuilt pieces of the live site use the live site's own treatments */
+.mock-crumb { color: var(--abpi-aubergine); }
+.mock-h1 { color: var(--abpi-aubergine); }
+.mock-nav { border-color: var(--abpi-rule); color: var(--abpi-aubergine); font-weight: 700; }
+.mock-logo { color: var(--abpi-plum); letter-spacing: -0.03em; }
+.mock-search { border-color: var(--abpi-ink); color: var(--abpi-grey); }
+.mock-outline { border-color: var(--abpi-aubergine); }
+.mock-utility { background: var(--abpi-aubergine); border: 0; color: var(--abpi-white); }
+.mock-utility a, .mock-utility .mock-menu-trigger { color: var(--abpi-white); }
+.mock-menu-trigger { color: var(--abpi-aubergine); font-weight: 700; font-family: var(--abpi-font); }
+.mock-menu-panel { border: 0; border-top: 4px solid var(--abpi-magenta); box-shadow: 0 8px 24px rgba(36, 21, 58, 0.18); color: var(--abpi-ink); }
+.mock-menu-panel li { padding: 0.35rem 0; border-bottom: 1px solid var(--abpi-rule); color: var(--abpi-aubergine); font-weight: 600; }
+.mock-select { border-color: var(--abpi-aubergine); color: var(--abpi-aubergine); font-weight: 600; }
+.stat-grid > div { border: 0; background: var(--abpi-mist); }
+.stat-grid b { color: var(--abpi-magenta); font-size: 2rem; }
+.big-fig { color: var(--abpi-magenta); }
+.filter-h { color: var(--abpi-aubergine); }
+.mock-result h4 { color: var(--abpi-aubergine); }
+.mock-footer { background: var(--abpi-mist); }
+.mock-footer h4 { color: var(--abpi-aubergine); }
+.footer-signup { background: var(--abpi-white); padding: 1.25rem; border-top: 4px solid var(--abpi-magenta); }
+.confirm-inline { color: var(--abpi-plum); }
+.share-card { border-color: var(--abpi-rule); }
+.share-body b { color: var(--abpi-aubergine); }
+.code-snip { background: #1B1026; color: #EFE7F5; border: 0; }
+.gloss-term { color: var(--abpi-plum); font-weight: 600; }
+.gloss-pop { border: 0; border-top: 4px solid var(--abpi-magenta); box-shadow: 0 8px 24px rgba(36, 21, 58, 0.18); }
+.gloss-pop h4 { color: var(--abpi-aubergine); }
+.explainer { border-left: 6px solid var(--abpi-magenta); }
+.explainer ul { list-style: none; padding-left: 0; }
+.explainer li { position: relative; padding-left: 1.25rem; }
+.explainer li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 0.5rem; height: 0.5rem; background: var(--abpi-magenta); }
+.mock-event h4, .mock-tile h4 { color: var(--abpi-aubergine); }
+.mock-tile { border: 0; background: var(--abpi-white); box-shadow: inset 0 0 0 1px var(--abpi-rule); }
+.mock-tile .mock-meta { color: var(--abpi-plum); }
+.caps-link { color: var(--abpi-plum); }
+.booking-panel { border-top: 6px solid var(--abpi-magenta); }
+.addr-bar { border-color: var(--abpi-rule); background: var(--abpi-mist); }
+.url-table thead th { border-bottom-color: var(--abpi-aubergine); color: var(--abpi-aubergine); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+h3.pasted { color: var(--abpi-ink); font-family: var(--abpi-font); font-weight: 800; }
+.link-grid a { border: 0; background: var(--abpi-mist); font-weight: 700; text-decoration: none; border-left: 4px solid var(--abpi-magenta); }
+.link-grid a:hover { background: var(--abpi-lilac-mist); }
+.serp b { color: #1a0dab; font-weight: 500; }
+.lang-switch { border-color: var(--abpi-aubergine); }
+.lang-switch .on { background: var(--abpi-aubergine); }
+.lang-switch a { font-weight: 700; }
+/* The three button styles seen on the homepage today */
+.today-btn { border: 0; color: var(--abpi-white); background: var(--abpi-magenta); }
+.today-btn.caps-a { line-height: 60px; padding: 0 18px; background: #941B80; }
+.today-btn.caps-b { padding: 20px; }
+.today-btn.plain { background: var(--abpi-plum); padding: 15px 20px; }
+.outline li { border-left-color: var(--abpi-lilac); background: var(--abpi-mist); }
+.outline code { color: var(--abpi-magenta); }
+.outline .bad { border-left-color: var(--wf-note-query-border); background: var(--wf-note-query-bg); }
+.checker .opts label { color: var(--abpi-white); }

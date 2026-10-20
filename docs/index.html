@@ -10,24 +10,47 @@
 </head>
 <body class="hub">
   <a class="skip-link" href="#main">Skip to content</a>
-  <!-- Prototype navigator (replaces the ABPI's own header, R01) -->
+  <!-- Prototype navigator (replaces the ABPI's own header, R01).
+       Two tabs: the five big improvements and the quick wins (R06). -->
   <header class="sticky site-header proto-nav">
     <div class="container proto-nav-row">
       <a class="proto-home" href="./index.html" aria-label="ABPI prototypes, overview">ABPI <span>prototypes</span></a>
-      <nav aria-label="Prototypes">
-        <ul class="proto-links">
-          <li><a href="./index.html" data-proto="index">Overview</a></li>
-          <li><a href="./pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
-          <li><a href="./pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
-          <li><a href="./pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
-          <li><a href="./pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
-          <li><a href="./pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
-        </ul>
+      <nav class="proto-sections" aria-label="Sections">
+        <a href="./index.html" data-section-link="major">Big improvements</a>
+        <a href="./quick-wins/index.html" data-section-link="quick">Quick wins</a>
       </nav>
       <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
         <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
         <span class="notes-label">Notes off</span>
       </button>
+    </div>
+    <div class="proto-subnav">
+      <div class="container">
+        <nav aria-label="Big improvements" data-section="major">
+          <ul class="proto-links">
+            <li><a href="./index.html" data-proto="index">Overview</a></li>
+            <li><a href="./pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
+            <li><a href="./pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
+            <li><a href="./pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
+            <li><a href="./pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
+            <li><a href="./pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Quick wins" data-section="quick" hidden>
+          <ul class="proto-links">
+            <li><a href="./quick-wins/index.html" data-qw-link="index">All quick wins</a></li>
+            <li><a href="./quick-wins/index.html#join" data-qw-link="join">Joining</a></li>
+            <li><a href="./quick-wins/index.html#members" data-qw-link="members">Members</a></li>
+            <li><a href="./quick-wins/index.html#data" data-qw-link="data">Facts and figures</a></li>
+            <li><a href="./quick-wins/index.html#pubs" data-qw-link="pubs">Publications</a></li>
+            <li><a href="./quick-wins/index.html#news" data-qw-link="news">News and email</a></li>
+            <li><a href="./quick-wins/index.html#events" data-qw-link="events">Events</a></li>
+            <li><a href="./quick-wins/index.html#code" data-qw-link="code">The Code</a></li>
+            <li><a href="./quick-wins/index.html#care" data-qw-link="care">Housekeeping</a></li>
+            <li><a href="./quick-wins/index.html#look" data-qw-link="look">Look and feel</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -38,14 +61,8 @@
         <span class="wf-placeholder logo">ABPI logo</span>
         <span class="hub-by">Prepared by ClerksWell</span>
       </div>
-      <h1>Five ideas for abpi.org.uk</h1>
-      <p class="lead">Clickable prototypes of five improvements to the ABPI website, aimed at the people who use it most: member companies, companies thinking of joining, policymakers and journalists. Everything that should work does, so you can try each one as a visitor would.</p>
-      <div class="wf-hub-meta">
-        <span>Version 2</span>
-        <span>30 September 2026</span>
-        <span>Designed prototypes</span>
-        <span>Sample data where marked</span>
-      </div>
+      <h1>Ideas for abpi.org.uk</h1>
+      <p class="lead">Clickable prototypes of five big improvements and 34 quick wins for the ABPI website, aimed at the people who use it most: member companies, companies thinking of joining, policymakers and journalists. Everything that should work does, so you can try each one as a visitor would.</p>
     </div>
   </div>
 
@@ -53,8 +70,14 @@
     <div class="container">
 
       <!-- The five prototypes -->
+      <!-- Two tabs (R06) -->
+      <nav class="tab-cards" aria-label="Two ways to look at the proposals">
+        <a class="tab-card is-current" href="./index.html" aria-current="page"><span class="tab-card-n">5</span><span><b>Big improvements</b>Five larger pieces of work, each combining several changes into a new journey.</span></a>
+        <a class="tab-card" href="./quick-wins/index.html"><span class="tab-card-n">34</span><span><b>Quick wins</b>Smaller changes, each shown on its own against the site as it is today.</span></a>
+      </nav>
+
       <section aria-labelledby="protos-title">
-        <h2 class="hub-h2" id="protos-title">The prototypes</h2>
+        <h2 class="hub-h2" id="protos-title">Big improvements</h2>
         <ol class="proto-list">
           <li class="proto-card">
             <a class="proto-thumb" href="./pages/join.html" tabindex="-1" aria-hidden="true"><span class="wf-placeholder">Join the ABPI</span></a>
@@ -115,7 +138,8 @@
           <h2 class="hub-h2" id="review-title">How to review</h2>
           <ul>
             <li>This version applies the ABPI's own look: the aubergine, plum and magenta palette, Poppins, square corners and the split hero with a photograph. Photography is the ABPI's own, loaded from abpi.org.uk; where it can't load, a brand-colour illustration shows instead.</li>
-            <li>Everything interactive works: the checker, forms and their error messages, search and filters, charts, sign-in, booking panels. Links to pages outside these five go nowhere by design.</li>
+            <li>There are two tabs, switched at the top of every page. <strong>Big improvements</strong> are the five prototypes on this page. <strong>Quick wins</strong> are 34 smaller changes, each with a <strong>Today / Proposed</strong> switch so you can compare it with the current site. Any item in either tab can be taken on its own.</li>
+            <li>Everything interactive works: the checker, forms and their error messages, search and filters, charts, sign-in, booking panels. Links to pages outside the prototypes go nowhere by design.</li>
             <li>Use the bar at the top to move between prototypes. Switch <strong>Notes on</strong> (top right) to see what each prototype proposes and why, plus notes on behaviour (yellow) and open questions for the ABPI (red). Notes start switched off.</li>
             <li>Member company names, statistics, publication titles and event titles are real, taken from abpi.org.uk on 30 September 2026. Therapy areas, sites, prices, places and anything marked "sample" are illustrative.</li>
             <li>Works on a phone: open this page on your mobile to check the layouts.</li>
@@ -129,6 +153,7 @@
             <li><a href="./pages/topic.html">Topic hub: clinical research</a><span>Part of prototype 4</span></li>
             <li><a href="./pages/media.html">Media centre</a><span>Part of prototype 5</span></li>
             <li><a href="./pages/events.html">Events</a><span>Part of prototype 5</span></li>
+            <li><a href="./quick-wins/index.html">All quick wins</a><span>34 smaller changes, each on its own</span></li>
             <li><a href="./modules/library.html">Module library</a><span>The new components, each shown once</span></li>
           </ul>
         </div>

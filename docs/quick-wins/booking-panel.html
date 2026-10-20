@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A clear booking panel with add to calendar — ABPI quick wins</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body data-qw-theme="events">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Prototype navigator (replaces the ABPI's own header, R01).
+       Two tabs: the five big improvements and the quick wins (R06). -->
+  <header class="sticky site-header proto-nav">
+    <div class="container proto-nav-row">
+      <a class="proto-home" href="../index.html" aria-label="ABPI prototypes, overview">ABPI <span>prototypes</span></a>
+      <nav class="proto-sections" aria-label="Sections">
+        <a href="../index.html" data-section-link="major">Big improvements</a>
+        <a href="../quick-wins/index.html" data-section-link="quick">Quick wins</a>
+      </nav>
+      <button type="button" class="notes-toggle" role="switch" aria-checked="false" data-notes-toggle>
+        <span class="notes-track" aria-hidden="true"><span class="notes-thumb"></span></span>
+        <span class="notes-label">Notes off</span>
+      </button>
+    </div>
+    <div class="proto-subnav">
+      <div class="container">
+        <nav aria-label="Big improvements" data-section="major">
+          <ul class="proto-links">
+            <li><a href="../index.html" data-proto="index">Overview</a></li>
+            <li><a href="../pages/join.html" data-proto="join join-enquiry"><span class="n">1</span> Join the ABPI</a></li>
+            <li><a href="../pages/members.html" data-proto="members member-area"><span class="n">2</span> Members</a></li>
+            <li><a href="../pages/data.html" data-proto="data"><span class="n">3</span> Industry in numbers</a></li>
+            <li><a href="../pages/publications.html" data-proto="publications topic"><span class="n">4</span> Publications</a></li>
+            <li><a href="../pages/stay-informed.html" data-proto="stay-informed media events"><span class="n">5</span> Stay informed</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Quick wins" data-section="quick" hidden>
+          <ul class="proto-links">
+            <li><a href="../quick-wins/index.html" data-qw-link="index">All quick wins</a></li>
+            <li><a href="../quick-wins/index.html#join" data-qw-link="join">Joining</a></li>
+            <li><a href="../quick-wins/index.html#members" data-qw-link="members">Members</a></li>
+            <li><a href="../quick-wins/index.html#data" data-qw-link="data">Facts and figures</a></li>
+            <li><a href="../quick-wins/index.html#pubs" data-qw-link="pubs">Publications</a></li>
+            <li><a href="../quick-wins/index.html#news" data-qw-link="news">News and email</a></li>
+            <li><a href="../quick-wins/index.html#events" data-qw-link="events">Events</a></li>
+            <li><a href="../quick-wins/index.html#code" data-qw-link="code">The Code</a></li>
+            <li><a href="../quick-wins/index.html#care" data-qw-link="care">Housekeeping</a></li>
+            <li><a href="../quick-wins/index.html#look" data-qw-link="look">Look and feel</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main" class="flush">
+    <!-- What we're proposing and why (shown when Notes are on) -->
+    <aside class="proposal" aria-label="About this quick win">
+      <div class="container">
+        <p class="proposal-eyebrow">Quick win 22 of 34 · Events</p>
+        <div class="proposal-grid">
+          <div><h2>What we're proposing</h2><p>Date, time, place and price in one panel, a plain booking button and a calendar file.</p></div>
+          <div><h2>Why</h2><p>Booking currently goes through a link that reads "VISIT THE WEBSITE HERE!" (on another event, "VISIT THE WEBSITE HERE TO BOOK!"), which doesn't say where it goes. A small panel with the essentials, a button that names the booking system and a calendar file is a template change.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- QW22: A clear booking panel with add to calendar (R-QW22, idea #34) -->
+    <div class="qw-head">
+      <div class="container">
+        <p class="qw-num">QW22 · Events</p>
+        <h1>A clear booking panel with add to calendar</h1>
+        <p class="lead">Date, time, place and price in one panel, a plain booking button and a calendar file.</p>
+        <p class="qw-where">Also part of prototype 5, Stay informed.</p>
+      </div>
+    </div>
+
+    <div data-ba>
+      <div class="ba-bar">
+        <div class="container">
+          <div class="ba-switch" role="group" aria-label="Compare">
+            <button type="button" data-ba-show="before" aria-pressed="true">Today</button>
+            <button type="button" data-ba-show="after" aria-pressed="false">Proposed</button>
+          </div>
+          <span class="ba-hint">Switch between the site as it is and the change. Arrow keys work too.</span>
+        </div>
+      </div>
+      <div class="container ba-stage">
+        <div class="ba-before">
+          <p class="ba-caption"><b>Today</b><span>A capitalised link above the description.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership2/events/2026/october/nicedtsuabpi-masterclass-evidence-synthesis-for-nice-submissions/</span></div>
+            <div class="ba-frame-body">
+<p class="mock-meta">06 October 2026 · 09:15 - 16:30 · Physical · Public &amp; Paid</p><h3>NICE/DTSU/ABPI Masterclass: Evidence Synthesis for NICE submissions</h3><p><a href="#" class="caps-link">VISIT THE WEBSITE HERE!</a></p><p>The NICE/DTSU/ABPI Masterclasses are unique in being focused solely on the specific requirements of NICE…</p>
+            </div>
+          </div>
+        </div>
+        <div class="ba-after" hidden>
+          <p class="ba-caption"><b>Proposed</b><span>The essentials in one panel. &quot;Add to calendar&quot; downloads a real calendar file.</span></p>
+          <div class="ba-frame"><div class="ba-frame-bar"><i></i><i></i><i></i><span>abpi.org.uk/membership2/events/2026/october/nicedtsuabpi-masterclass-evidence-synthesis-for-nice-submissions/</span></div>
+            <div class="ba-frame-body">
+<div class="split"><div><h3>NICE/DTSU/ABPI Masterclass: Evidence Synthesis for NICE submissions</h3><p>The NICE/DTSU/ABPI Masterclasses are unique in being focused solely on the specific requirements of NICE…</p></div>
+<aside class="panel booking-panel"><dl class="kv"><dt>When</dt><dd>6 October 2026</dd><dt>Time</dt><dd>09:15–16:30</dd><dt>Where</dt><dd>London Bridge</dd><dt>For</dt><dd>Open to all</dd><dt>Price</dt><dd>[£ member / £ non-member]</dd></dl><a class="btn btn-block" href="#">Book on Eventscloud</a><a class="btn btn-secondary btn-block" download="nice-masterclass.ics" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-%2F%2FABPI%20prototype%2F%2FEN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Anice-masterclass%40abpi-prototype%0D%0ADTSTART%3A20261006T091500%0D%0ADTEND%3A20261006T163000%0D%0ASUMMARY%3ANICE%2FDTSU%2FABPI%20Masterclass%0D%0ALOCATION%3ALondon%20Bridge%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR">Add to calendar</a></aside></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Prototype pager (replaces the ABPI's own footer) -->
+  <footer class="proto-footer">
+    <div class="container">
+      <nav class="proto-pager" aria-label="Previous and next prototype" data-proto-pager></nav>
+      <p class="wf-meta">Prepared by ClerksWell · Prototypes for discussion · Sample data where marked</p>
+    </div>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/quick-wins.js"></script>
+  <script src="../js/wireframe.js"></script>
+  <script src="../js/photos.js"></script>
+</body>
+</html>
